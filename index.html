@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<style>
+:root{
+	--bugclr:#9CB558;
+	--darkclr:#565561;
+	--dragonclr:#1183A0;
+	--electricclr:#DBB409;
+	--fairyclr:#ED9BB8;
+	--fightingclr:#D57B47;
+	--fireclr:#DA4246;
+	--flyingclr:#5A82EF;
+	--ghostclr:#A0729B;
+	--grassclr:#449E4E;
+	--groundclr:#9B5E41;
+	--iceclr:#6EB4B9;
+	--normalclr:#969493;
+	--poisonclr:#815499;
+	--psychicclr:#E56D9B;
+	--rockclr:#A08C77;
+	--steelclr:#7D879B;
+	--waterclr:#55B8E1;
+	}
+	
+
+body{
+background-image:url('forest2.jpg');
+ background-repeat: no-repeat;
+ 
+  background-size: cover;
+}
+
+.template{
+	height:auto;
+	width:50%;
+	margin:auto;
+	position:relative;
+	
+	
+
+  }
+	
+.block1{
+    background: pink;
+    height: 202px;
+    width: 150px;
+    margin: 0;
+      border-radius: 10px;
+
+	position:absolute;
+	z-index: -5;
+	top:496px;
+	left:166px;
+	}
+	
+.block2{
+    background: pink;
+    height: 202px;
+    width: 150px;
+    margin: 0;
+    border-radius: 10px;
+	position:absolute;
+	z-index: -5;
+	top:496px;
+	left: 330px;
+	}
+	
+.block3{
+    background: pink;
+    height: 202px;
+    width: 150px;
+    margin: 0;
+    border-radius: 10px;
+	position:absolute;
+	z-index: -1;
+	top:496px;
+	left: 492px;
+	}
+	
+.block4{
+    background: pink;
+    height: 202px;
+    width: 150px;
+    margin: 0;
+    border-radius: 10px;
+	position:absolute;
+	z-index: -5;
+	top:496px;
+	left: 654px;
+	}
+.block5{
+    background: pink;
+    height: 70px;
+    width: 340px;
+    margin: 0;
+    border-radius: 10px;
+	position:absolute;
+	z-index: -5;
+	top:713px;
+	left: 500px;
+	}
+		
+.trainer{
+	position:absolute;
+	top:100px;
+	left:250px;
+	}
+	
+#output{
+	position:absolute;
+	height:325px;
+	width:auto;
+	z-index:-5;
+	}
+	
+.syncpairname{
+	position:absolute;
+	top: 0px;
+	left:289px;
+	}
+	
+.syncpairname input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:390px;
+	height:45px;
+	text-align:center;
+	font-size: 1.5rem;
+	font-weight:bold;
+	}
+	
+	.syncattackname{
+	position:absolute;
+	top: 725px;
+	left:150px;
+	}
+	
+.syncattackname input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:280px;
+	height:45px;
+	text-align:center;
+	font-size: 1rem;
+	font-weight:bold;
+	}
+	
+.gauge1{
+	position:absolute;
+	top: 539px;
+	left:235px;
+	}
+	
+.gauge1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.category1{
+	position:absolute;
+	top: 554px;
+	left:235px;
+	}
+	
+.category1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.power1{
+	position:absolute;
+	top: 569px;
+	left:235px;
+	}
+	
+.power1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.accuracy1{
+	position:absolute;
+	top: 584px;
+	left:235px;
+	}
+	
+.accuracy1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.target1{
+	position:absolute;
+	top: 599px;
+	left:230px;
+	}
+	
+.target1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:75px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.effect1{
+	position:absolute;
+	top: 614px;
+	left:235px;
+	}
+	
+.effect1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.gauge2{
+	position:absolute;
+	top: 539px;
+	left:400px;
+	}
+	
+.gauge2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.category2{
+	position:absolute;
+	top: 554px;
+	left:400px;
+	}
+	
+.category2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.power2{
+	position:absolute;
+	top: 569px;
+	left:400px;
+	}
+	
+.power2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.accuracy2{
+	position:absolute;
+	top: 584px;
+	left:400px;
+	}
+	
+.accuracy2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.target2{
+	position:absolute;
+	top: 599px;
+	left:395px;
+	}
+	
+.target2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:75px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.effect2{
+	position:absolute;
+	top: 614px;
+	left:400px;
+	}
+	
+.effect2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.gauge3{
+	position:absolute;
+	top: 539px;
+	left:565px;
+	}
+	
+.gauge3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.category3{
+	position:absolute;
+	top: 554px;
+	left:565px;
+	}
+	
+.category3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.power3{
+	position:absolute;
+	top: 569px;
+	left:565px;
+	}
+	
+.power3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.accuracy3{
+	position:absolute;
+	top: 584px;
+	left:565px;
+	}
+	
+.accuracy3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.target3{
+	position:absolute;
+	top: 599px;
+	left:560px;
+	}
+	
+.target3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:75px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.effect3{
+	position:absolute;
+	top: 614px;
+	left:565px;
+	}
+	
+.effect3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.gauge4{
+	position:absolute;
+	top: 539px;
+	left:730px;
+	}
+	
+.gauge4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.category4{
+	position:absolute;
+	top: 554px;
+	left:730px;
+	}
+	
+.category4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.power4{
+	position:absolute;
+	top: 569px;
+	left:730px;
+	}
+	
+.power4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.accuracy4{
+	position:absolute;
+	top: 584px;
+	left:730px;
+	}
+	
+.accuracy4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.target4{
+	position:absolute;
+	top: 599px;
+	left:725px;
+	}
+	
+.target4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:75px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.effect4{
+	position:absolute;
+	top: 614px;
+	left:730px;
+	}
+	
+.effect4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.category5{
+	position:absolute;
+	top: 718px;
+	left:590px;
+	}
+	
+.category5 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.power5{
+	position:absolute;
+	top: 739px;
+	left:590px;
+	}
+	
+.power5 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:50px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+.target5{
+	position:absolute;
+	top: 760px;
+	left:580px;
+	}
+	
+.target5 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:75px;
+	height:10px;
+	text-align:center;
+	font-size: .75rem;
+	}
+	
+#star{
+	position:absolute;
+	top: 40px;
+	left:455px;
+	height:40px;
+	width:auto;
+	margin:0;
+	z-index:5;
+	
+}
+	
+#role{
+	position:absolute;
+	top: 425px;
+	left:199px;
+	height:30px;;
+	width:auto;
+	margin:0;
+	z-index:5;
+	
+}
+
+#type{
+	position:absolute;
+	top: 425px;
+	left:268px;
+	height:30px;;
+	width:auto;
+	margin:0;
+	z-index:5;
+	
+}
+
+#weak{
+	position:absolute;
+	top: 425px;
+	left:345px;
+	height:30px;;
+	width:auto;
+	margin:0;
+	z-index:5;
+	
+}
+
+
+.themeskills{
+	position:absolute;
+	top:413px;
+	left:545px;
+	text-align:center;
+	font-size: .7rem;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	background-color: transparent;
+	line-height: 1.1;
+	overflow:hidden;
+	}
+	
+.description1{
+	position:absolute;
+	top:635px;
+	left:170px;
+	font-size:.55rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.description2{
+	position:absolute;
+	top:635px;
+	left:335px;
+	font-size:.55rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.description3{
+	position:absolute;
+	top:635px;
+	left:500px;
+	font-size:.55rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.description4{
+	position:absolute;
+	top:635px;
+	left:665px;
+	font-size:.55rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.attack1{
+	position:absolute;
+	top:502px;
+	left:177px;
+	}
+	
+	.attack1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:125px;
+	height:30px;
+	text-align:center;
+	font-size: .75rem;
+	font-weight:bold;
+	}
+	
+	.attack2{
+	position:absolute;
+	top:502px;
+	left:340px;
+	}
+	
+	.attack2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:125px;
+	height:30px;
+	text-align:center;
+	font-size: .75rem;
+	font-weight:bold;
+	}
+	
+		.attack3{
+	position:absolute;
+	top:502px;
+	left:503px;
+	}
+	
+	.attack3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:125px;
+	height:30px;
+	text-align:center;
+	font-size: .75rem;
+	font-weight:bold;
+	}
+	
+			.attack4{
+	position:absolute;
+	top:502px;
+	left:666px;
+	}
+	
+	.attack4 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:125px;
+	height:30px;
+	text-align:center;
+	font-size: .75rem;
+	font-weight:bold;
+	}
+	
+.passive1{
+	position:absolute;
+	top:140px;
+	left:515px;
+	}
+	
+.passive1 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:200px;
+	height:25px;
+	text-align:center;
+	font-size: 1rem;
+	font-weight:bold;
+	}
+	
+.passdesc1{
+	position:absolute;
+	top:160px;
+	left:465px;
+	font-size:.75rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.passive2{
+	position:absolute;
+	top:207px;
+	left:515px;
+	}
+	
+.passive2 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:200px;
+	height:25px;
+	text-align:center;
+	font-size: 1rem;
+	font-weight:bold;
+	}
+	
+.passdesc2{
+	position:absolute;
+	top:227px;
+	left:465px;
+	font-size:.75rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.passive3{
+	position:absolute;
+	top:274px;
+	left:515px;
+	}
+	
+.passive3 input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:200px;
+	height:25px;
+	text-align:center;
+	font-size: 1rem;
+	font-weight:bold;
+	}
+	
+.passdesc3{
+	position:absolute;
+	top:294px;
+	left:465px;
+	font-size:.75rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	}
+	
+.synceffect{
+	position:absolute;
+	top:718px;
+	left:666px;
+	font-size:.75rem;
+	background-color:transparent;
+	overflow:hidden;
+	text-align:center;
+	resize: none;
+	outline: none;
+	border: 0px solid;
+	
+</style>
+<title>Pokemon Masters Custom Sync Pair Creator</title>
+<body>
+
+<div class="template">
+	<img src="PokemonMastersCustomTemplate.png"width="auto" height="800" >
+		<div class="block1" id="PreviewResults"></div>
+		<div class="block2" id="PreviewResults2"></div>
+		<div class="block3" id="PreviewResults3"></div>
+		<div class="block4" id="PreviewResults4"></div>
+		<div class="block5" id="PreviewResults5"></div>
+		<img id="star" src="3star.png">
+		<img id="role" src="strike.png">
+		<img id="type" src="Normal.png">
+		<img id="weak" src="Normal.png">
+		<form class="syncpairname">
+			<input type="text"placeholder="Sync Pair Name">
+		</form>
+		<form class="syncattackname">
+			<input type="text"placeholder="Sync Attack Name">
+		</form>
+		
+		<form class="gauge1">
+			<input type="text" placeholder="1-4">
+		</form>
+		<form class="category1">
+			<input type="text"placeholder="status">
+		</form>
+		<form class="power1">
+			<input type="text"placeholder="100-100">
+		</form>
+		<form class="accuracy1">
+			<input type="text"placeholder="100">
+		</form>
+		<form class="target1">
+			<input type="text"placeholder="all opponents">
+		</form>
+		<form class="effect1">
+			<input type="text"placeholder="none">
+		</form>
+		
+		<form class="gauge2">
+			<input type="text" placeholder="1-4">
+		</form>
+		<form class="category2">
+			<input type="text"placeholder="status">
+		</form>
+		<form class="power2">
+			<input type="text"placeholder="100-100">
+		</form>
+		<form class="accuracy2">
+			<input type="text"placeholder="100">
+		</form>
+		<form class="target2">
+			<input type="text"placeholder="all opponents">
+		</form>
+		<form class="effect2">
+			<input type="text"placeholder="none">
+		</form>
+		
+		<form class="gauge3">
+			<input type="text" placeholder="1-4">
+		</form>
+		<form class="category3">
+			<input type="text"placeholder="status">
+		</form>
+		<form class="power3">
+			<input type="text"placeholder="100-100">
+		</form>
+		<form class="accuracy3">
+			<input type="text"placeholder="100">
+		</form>
+		<form class="target3">
+			<input type="text"placeholder="all opponents">
+		</form>
+		<form class="effect3">
+			<input type="text"placeholder="none">
+		</form>
+		
+		
+		<form class="gauge4">
+			<input type="text" placeholder="1-4">
+		</form>
+		<form class="category4">
+			<input type="text"placeholder="status">
+		</form>
+		<form class="power4">
+			<input type="text"placeholder="100-100">
+		</form>
+		<form class="accuracy4">
+			<input type="text"placeholder="100">
+		</form>
+		<form class="target4">
+			<input type="text"placeholder="all opponents">
+		</form>
+		<form class="effect4">
+			<input type="text"placeholder="none">
+		</form>
+		
+		<form class="category5">
+			<input type="text"placeholder="status">
+		</form>
+		
+		<form class="power5">
+			<input type="text"placeholder="100-100">
+		</form>
+		
+		<form class="target5">
+			<input type="text"placeholder="all opponents">
+		</form>
+		
+		
+		<textarea class="themeskills" rows="5" cols="20"placeholder="hit enter for each"></textarea>
+		<textarea class="description1" rows="6" cols="24"placeholder="Add additional effects"></textarea>
+		<textarea class="description2" rows="6" cols="24"placeholder="Add additional effects"></textarea>
+		<textarea class="description3" rows="6" cols="24"placeholder="Add additional effects"></textarea>
+		<textarea class="description4" rows="6" cols="24"placeholder="Add additional effects"></textarea>
+		
+		<form class="attack1">
+			<input type="text" placeholder="Move 1">
+		</form>
+		<form class="attack2">
+			<input type="text" placeholder="Move 2">
+		</form>
+		<form class="attack3">
+			<input type="text" placeholder="Move 3">
+		</form>
+		<form class="attack4">
+			<input type="text" placeholder="Move 4">
+		</form>
+		
+		<form class="passive1">
+			<input type="text" placeholder="Passive 1">
+		</form>
+		
+		<textarea class="passdesc1" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		
+		<form class="passive2">
+			<input type="text" placeholder="Passive 2">
+		</form>
+		
+		<textarea class="passdesc2" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		
+			<form class="passive3">
+			<input type="text" placeholder="Passive 3">
+		</form>
+		
+		<textarea class="passdesc3" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		
+		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"></textarea>
+		
+		
+		
+		<p class="trainer"><img id="output"/></p>
+		
+					
+</div>
+		
+	<div class="selectors">
+      <select id="selector"onchange="selectBackground()">
+          <option>Move 1</option>
+		  <option value="var(--bugclr)">Bug</option>
+          <option value="var(--darkclr)">Dark</option>
+          <option value="var(--dragonclr)">Dragon</option>
+          <option value="var(--electricclr)">Electric</option>
+		  <option value="var(--fairyclr)">Fairy</option>
+          <option value="var(--fightingclr)">Fighting</option>
+          <option value="var(--fireclr)">Fire</option>
+          <option value="var(--flyingclr)">Flying</option>
+		  <option value="var(--ghostclr)">Ghost</option>
+          <option value="var(--grassclr)">Grass</option>
+		  <option value="var(--groundclr)">Ground</option>
+          <option value="var(--iceclr)">Ice</option>
+          <option value="var(--normalclr)">Normal</option>
+          <option value="var(--poisonclr)">Poison</option>
+		  <option value="var(--psychicclr)">Psychic</option>
+          <option value="var(--rockclr)">Rock</option>
+          <option value="var(--steelclr)">Steel</option>
+          <option value="var(--waterclr)">Water</option>
+         
+      </select>   
+     
+	
+	
+      <select id="selector2"onchange="selectBackground2()">
+          <option>Move 2 </option>
+          <option value="var(--bugclr)">Bug</option>
+          <option value="var(--darkclr)">Dark</option>
+          <option value="var(--dragonclr)">Dragon</option>
+          <option value="var(--electricclr)">Electric</option>
+		  <option value="var(--fairyclr)">Fairy</option>
+          <option value="var(--fightingclr)">Fighting</option>
+          <option value="var(--fireclr)">Fire</option>
+          <option value="var(--flyingclr)">Flying</option>
+		  <option value="var(--ghostclr)">Ghost</option>
+          <option value="var(--grassclr)">Grass</option>
+		  <option value="var(--groundclr)">Ground</option>
+          <option value="var(--iceclr)">Ice</option>
+          <option value="var(--normalclr)">Normal</option>
+          <option value="var(--poisonclr)">Poison</option>
+		  <option value="var(--psychicclr)">Psychic</option>
+          <option value="var(--rockclr)">Rock</option>
+          <option value="var(--steelclr)">Steel</option>
+          <option value="var(--waterclr)">Water</option>
+      </select>   
+   
+		
+	
+		<select id="selector3"onchange="selectBackground3()">
+			<option>Move 3</option>
+			<option value="var(--bugclr)">Bug</option>
+          <option value="var(--darkclr)">Dark</option>
+          <option value="var(--dragonclr)">Dragon</option>
+          <option value="var(--electricclr)">Electric</option>
+		  <option value="var(--fairyclr)">Fairy</option>
+          <option value="var(--fightingclr)">Fighting</option>
+          <option value="var(--fireclr)">Fire</option>
+          <option value="var(--flyingclr)">Flying</option>
+		  <option value="var(--ghostclr)">Ghost</option>
+          <option value="var(--grassclr)">Grass</option>
+		  <option value="var(--groundclr)">Ground</option>
+          <option value="var(--iceclr)">Ice</option>
+          <option value="var(--normalclr)">Normal</option>
+          <option value="var(--poisonclr)">Poison</option>
+		  <option value="var(--psychicclr)">Psychic</option>
+          <option value="var(--rockclr)">Rock</option>
+          <option value="var(--steelclr)">Steel</option>
+          <option value="var(--waterclr)">Water</option>
+		</select>   
+	
+	
+	
+      <select id="selector4"onchange="selectBackground4()">
+          <option>Move 4</option>
+          <option value="var(--bugclr)">Bug</option>
+          <option value="var(--darkclr)">Dark</option>
+          <option value="var(--dragonclr)">Dragon</option>
+          <option value="var(--electricclr)">Electric</option>
+		  <option value="var(--fairyclr)">Fairy</option>
+          <option value="var(--fightingclr)">Fighting</option>
+          <option value="var(--fireclr)">Fire</option>
+          <option value="var(--flyingclr)">Flying</option>
+		  <option value="var(--ghostclr)">Ghost</option>
+          <option value="var(--grassclr)">Grass</option>
+		  <option value="var(--groundclr)">Ground</option>
+          <option value="var(--iceclr)">Ice</option>
+          <option value="var(--normalclr)">Normal</option>
+          <option value="var(--poisonclr)">Poison</option>
+		  <option value="var(--psychicclr)">Psychic</option>
+          <option value="var(--rockclr)">Rock</option>
+          <option value="var(--steelclr)">Steel</option>
+          <option value="var(--waterclr)">Water</option>
+      </select>   
+    
+		
+	
+      <select id="selector5" onchange="selectBackground5()">
+          <option>Select Sync</option>
+          <option value="var(--bugclr)">Bug</option>
+          <option value="var(--darkclr)">Dark</option>
+          <option value="var(--dragonclr)">Dragon</option>
+          <option value="var(--electricclr)">Electric</option>
+		  <option value="var(--fairyclr)">Fairy</option>
+          <option value="var(--fightingclr)">Fighting</option>
+          <option value="var(--fireclr)">Fire</option>
+          <option value="var(--flyingclr)">Flying</option>
+		  <option value="var(--ghostclr)">Ghost</option>
+          <option value="var(--grassclr)">Grass</option>
+		  <option value="var(--groundclr)">Ground</option>
+          <option value="var(--iceclr)">Ice</option>
+          <option value="var(--normalclr)">Normal</option>
+          <option value="var(--poisonclr)">Poison</option>
+		  <option value="var(--psychicclr)">Psychic</option>
+          <option value="var(--rockclr)">Rock</option>
+          <option value="var(--steelclr)">Steel</option>
+          <option value="var(--waterclr)">Water</option>
+      </select> 
+	<select id="starchoose" onchange="setPicture();">
+		<option>Star Level</option>
+		<option value="3star.png">3 star</option>
+		<option value="4star.png">4 star</option>
+		<option value="5star.png">5 star</option>
+	</select>
+	
+	<select id="rolechoose" onchange="setRole();">
+		<option>Role</option>
+		<option value="strike.png">Strike</option>
+		<option value="Strike (Special).png">Special Strike</option>
+		<option value="support.png">Support</option>
+		<option value="tech.png">Tech</option>
+	</select>
+	
+	<select id="typechoose" onchange="setType();">
+		<option>Type</option>
+		<option value="Bug.png">Bug</option>
+		<option value="Dark.png">Dark</option>
+		<option value="Dragon.png">Dragon</option>
+		<option value="Electric.png">Electric</option>
+		<option value="Fairy.png">Fairy</option>
+		<option value="Fighting.png">Fighting</option>
+		<option value="Fire.png">Fire</option>
+		<option value="Flying.png">Flying</option>
+		<option value="Ghost.png">Ghost</option>
+		<option value="Grass.png">Grass</option>
+		<option value="ground.png">Ground</option>
+		<option value="Ice.png">Ice</option>
+		<option value="Normal.png">Normal</option>
+		<option value="Poison.png">Poison</option>
+		<option value="Psychic.png">Pyschic</option>
+		<option value="Rock.png">Rock</option>
+		<option value="Steel.png">Steel</option>
+		<option value="Water.png">Water</option>
+	</select>
+	
+	<select id="weakchoose" onchange="setWeak();">
+		<option>Weakness</option>
+		<option value="Bug.png">Bug</option>
+		<option value="Dark.png">Dark</option>
+		<option value="Dragon.png">Dragon</option>
+		<option value="Electric.png">Electric</option>
+		<option value="Fairy.png">Fairy</option>
+		<option value="Fighting.png">Fighting</option>
+		<option value="Fire.png">Fire</option>
+		<option value="Flying.png">Flying</option>
+		<option value="Ghost.png">Ghost</option>
+		<option value="Grass.png">Grass</option>
+		<option value="ground.png">Ground</option>
+		<option value="Ice.png">Ice</option>
+		<option value="Normal.png">Normal</option>
+		<option value="Poison.png">Poison</option>
+		<option value="Psychic.png">Pyschic</option>
+		<option value="Rock.png">Rock</option>
+		<option value="Steel.png">Steel</option>
+		<option value="Water.png">Water</option>
+	</select>
+	  
+    </div>	
+
+	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+	<p><label for="file" style="cursor: pointer;">Upload Trainer</label></p>
+	
+
+	
+
+	
+	
+	
+	
+	
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+<script>
+   function selectBackground(){
+        // Find your selector and pull it's selection
+        var select = document.getElementById('selector');
+        // Determine your target color (default 0 index to transparent)
+        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+        // Update your results area
+        document.getElementById('PreviewResults').style.backgroundColor = color;
+    }
+	
+	  function selectBackground2(){
+        // Find your selector and pull it's selection
+        var select = document.getElementById('selector2');
+        // Determine your target color (default 0 index to transparent)
+        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+        // Update your results area
+        document.getElementById('PreviewResults2').style.backgroundColor = color;
+    }
+	
+		  function selectBackground3(){
+        // Find your selector and pull it's selection
+        var select = document.getElementById('selector3');
+        // Determine your target color (default 0 index to transparent)
+        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+        // Update your results area
+        document.getElementById('PreviewResults3').style.backgroundColor = color;
+    }
+	
+			  function selectBackground4(){
+        // Find your selector and pull it's selection
+        var select = document.getElementById('selector4');
+        // Determine your target color (default 0 index to transparent)
+        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+        // Update your results area
+        document.getElementById('PreviewResults4').style.backgroundColor = color;
+    }
+	
+				  function selectBackground5(){
+        // Find your selector and pull it's selection
+        var select = document.getElementById('selector5');
+        // Determine your target color (default 0 index to transparent)
+        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+        // Update your results area
+        document.getElementById('PreviewResults5').style.backgroundColor = color;
+    }
+	
+	var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+	};
+	
+
+	function setPicture() {
+        var img = document.getElementById("starchoose");
+		var value = img.options[img.selectedIndex].value;
+		document.getElementById("star").src=value;
+	}
+	
+	function setRole() {
+        var img = document.getElementById("rolechoose");
+		var value = img.options[img.selectedIndex].value;
+		document.getElementById("role").src=value;
+	}
+	
+		function setType() {
+        var img = document.getElementById("typechoose");
+		var value = img.options[img.selectedIndex].value;
+		document.getElementById("type").src=value;
+	}
+	
+		function setWeak() {
+        var img = document.getElementById("weakchoose");
+		var value = img.options[img.selectedIndex].value;
+		document.getElementById("weak").src=value;
+	}
+	
+	
+
+</script>
