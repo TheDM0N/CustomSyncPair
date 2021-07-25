@@ -21,6 +21,7 @@
 	--rockclr:#A08C77;
 	--steelclr:#7D879B;
 	--waterclr:#55B8E1;
+	--trainermoveclr:#9DC9C0;
 	}
 	
 
@@ -642,7 +643,7 @@ background-image:url('forest2.jpg');
 .description1{
 	position:absolute;
 	top:635px;
-	left:170px;
+	left:172px;
 	font-size:.55rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -650,6 +651,7 @@ background-image:url('forest2.jpg');
 	resize: none;
 	outline: none;
 	border: 0px solid;
+	margin:0;
 	}
 	
 .description2{
@@ -663,12 +665,13 @@ background-image:url('forest2.jpg');
 	resize: none;
 	outline: none;
 	border: 0px solid;
+	margin:0;
 	}
 	
 .description3{
 	position:absolute;
 	top:635px;
-	left:500px;
+	left:497px;
 	font-size:.55rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -676,12 +679,13 @@ background-image:url('forest2.jpg');
 	resize: none;
 	outline: none;
 	border: 0px solid;
+	margin:0;
 	}
 	
 .description4{
 	position:absolute;
 	top:635px;
-	left:665px;
+	left:660px;
 	font-size:.55rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -689,6 +693,7 @@ background-image:url('forest2.jpg');
 	resize: none;
 	outline: none;
 	border: 0px solid;
+	margin:0;
 	}
 	
 .attack1{
@@ -806,6 +811,8 @@ background-image:url('forest2.jpg');
 	font-weight:bold;
 	}
 	
+
+	
 .passdesc2{
 	position:absolute;
 	top:227px;
@@ -860,6 +867,55 @@ background-image:url('forest2.jpg');
 	resize: none;
 	outline: none;
 	border: 0px solid;
+	}
+	
+.instructions{
+	width:350px;
+	height:auto;
+	outline:1px solid;
+	margin-left:75%;
+	
+	background-image:url('repeat.png');
+	}
+	
+.instructions h1{
+	text-align:center;
+	width:90%;
+	}
+	
+li{
+	line-height: 1.5;
+	padding: 0rem 2rem 0rem 0rem;
+	}
+	
+.clicker{
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	}
+	
+.btn2{
+	flex-grow: 1;
+	font-size:1rem;
+	text-decoration:none;
+	color:black;
+	margin:  0;
+}
+.btn2:hover{
+color:red;
+}
+
+ul{
+display:none;
+}
+
+input[type="text"]:hover{
+outline:1px solid;
+}
+
+textarea:hover{
+outline:1px solid;
+}
 	
 </style>
 <title>Pokemon Masters Custom Sync Pair Creator</title>
@@ -1013,8 +1069,8 @@ background-image:url('forest2.jpg');
 		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"></textarea>
 		
 		
-		
-		<p class="trainer"><img id="output"/></p>
+	
+	<p class="trainer"><img id="output"/></p>
 		
 					
 </div>
@@ -1040,6 +1096,7 @@ background-image:url('forest2.jpg');
           <option value="var(--rockclr)">Rock</option>
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
+		  <option value="var(--trainermoveclr)">Trainer Move</option>
          
       </select>   
      
@@ -1065,6 +1122,7 @@ background-image:url('forest2.jpg');
           <option value="var(--rockclr)">Rock</option>
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
+		  <option value="var(--trainermoveclr)">Trainer Move</option>
       </select>   
    
 		
@@ -1089,6 +1147,7 @@ background-image:url('forest2.jpg');
           <option value="var(--rockclr)">Rock</option>
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
+		  <option value="var(--trainermoveclr)">Trainer Move</option>
 		</select>   
 	
 	
@@ -1113,6 +1172,7 @@ background-image:url('forest2.jpg');
           <option value="var(--rockclr)">Rock</option>
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
+		  <option value="var(--trainermoveclr)">Trainer Move</option>
       </select>   
     
 		
@@ -1143,6 +1203,7 @@ background-image:url('forest2.jpg');
 		<option value="3star.png">3 star</option>
 		<option value="4star.png">4 star</option>
 		<option value="5star.png">5 star</option>
+		<option value="6star.png">6 star</option>
 	</select>
 	
 	<select id="rolechoose" onchange="setRole();">
@@ -1203,7 +1264,20 @@ background-image:url('forest2.jpg');
 	<p><label for="file" style="cursor: pointer;">Upload Trainer</label></p>
 	
 
-	
+		<div class="instructions">
+			<div class="clicker">
+				<h1>Tips and Advice</h1>
+				<a href="#footer" class="btn2" id="arrow"onclick="closeDiv()">▼</a>
+			</div>
+				<ul id="demo">
+					<li>Click on areas with words in order to edit them</li>
+					<li>Change colors and levels with the selectors below the image</li>
+					<li>Click on upload trainer to upload a trainer image(note use a png with no extra space is preferable)</li>
+					<li>When finished take a screenshot of the area</li>
+					<li>For now the pokemon image must be added on your own device after screenshoting</li>
+					<li>Bulbapedia should have high quality pngs of all characters and pokemon if searched</li>
+				</ul>
+		</div>
 
 	
 	
@@ -1212,7 +1286,7 @@ background-image:url('forest2.jpg');
 	
 </body>
 
-
+<footer id="footer"></footer>
 
 
 
@@ -1300,6 +1374,18 @@ background-image:url('forest2.jpg');
 		document.getElementById("weak").src=value;
 	}
 	
-	
-
+	function closeDiv() {
+  var x = document.getElementById("demo");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+   var y = document.getElementById("arrow");
+   if (y.innerHTML === "▼"){
+   y.innerHTML = "▲";
+   } else {
+   y.innerHTML="▼";
+}
+}
 </script>
