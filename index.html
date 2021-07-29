@@ -105,9 +105,20 @@ background-image:url('forest2.jpg');
 .trainer{
 	position:absolute;
 	top:100px;
-	left:225px;
+	left:250px;
 	}
 	
+.pokemon{
+	position:absolute;
+	top:100px;
+	left:25px;
+	}
+	
+#sprite{
+	position:absolute;
+	height:200px;
+	width:auto;
+	}
 #output{
 	position:absolute;
 	height:325px;
@@ -1069,7 +1080,8 @@ outline:1px solid;
 		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"></textarea>
 		
 		
-	
+	<p class="pokemon"><img id="sprite" src=
+	"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></p>
 	<p class="trainer"><img id="output"/></p>
 		
 					
@@ -1258,6 +1270,7 @@ outline:1px solid;
 		<option value="Water.png">Water</option>
 	</select>
 	  
+	   <input type="search" id="mySearch"><button onclick="pokeSearch()">Add Pokemon</button>
     </div>	
 
 	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
@@ -1388,4 +1401,10 @@ outline:1px solid;
    y.innerHTML="▼";
 }
 }
+
+function pokeSearch() {
+	let pokeID = document.getElementById("mySearch").value;
+  let pokeImage = document.getElementById('sprite')
+  pokeImage.srcset =    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeID}.png`
+  }
 </script>
