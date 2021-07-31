@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
 	--bugclr:#9CB558;
@@ -22,14 +25,24 @@
 	--steelclr:#7D879B;
 	--waterclr:#55B8E1;
 	--trainermoveclr:#9DC9C0;
+	
 	}
 	
+html{
+font-family: 'Georama', sans-serif;
 
+}
+textarea,
+input[type] {
+    font-family: 'Georama', sans-serif;
+	margin:0;
+}
 body{
 background-image:url('forest2.jpg');
  background-repeat: no-repeat;
  
   background-size: cover;
+  margin:0;
 }
 
 .template{
@@ -43,7 +56,8 @@ background-image:url('forest2.jpg');
   }
 	
 .block1{
-    background: pink;
+	background:pink;
+    
     height: 202px;
     width: 150px;
     margin: 0;
@@ -52,7 +66,7 @@ background-image:url('forest2.jpg');
 	position:absolute;
 	z-index: -5;
 	top:496px;
-	left:166px;
+	left:167px;
 	}
 	
 .block2{
@@ -88,7 +102,7 @@ background-image:url('forest2.jpg');
 	position:absolute;
 	z-index: -5;
 	top:496px;
-	left: 654px;
+	left: 655px;
 	}
 .block5{
     background: pink;
@@ -795,7 +809,7 @@ background-image:url('forest2.jpg');
 .passdesc1{
 	position:absolute;
 	top:160px;
-	left:465px;
+	left:485px;
 	font-size:.75rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -827,7 +841,7 @@ background-image:url('forest2.jpg');
 .passdesc2{
 	position:absolute;
 	top:227px;
-	left:465px;
+	left:485px;
 	font-size:.75rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -857,7 +871,7 @@ background-image:url('forest2.jpg');
 .passdesc3{
 	position:absolute;
 	top:294px;
-	left:465px;
+	left:485px;
 	font-size:.75rem;
 	background-color:transparent;
 	overflow:hidden;
@@ -927,6 +941,57 @@ outline:1px solid;
 textarea:hover{
 outline:1px solid;
 }
+
+.maxmove{
+height: 202px;
+    width: 150px;
+  
+    border-radius: 10px;
+	border: 3px solid;
+	background: url("MasterSteel.png"),#ed3572;
+	background-repeat: no-repeat;
+	background-size:75%;
+	background-position: 50% 50%;
+	background-blend-mode:lighten;
+	
+	
+	
+	position:relative;
+	left:410px;
+	display:none;
+	font-size:.75em;
+	line-height:.25;
+	}
+	
+.maxmove p{
+margin-left: 3px;
+font-weight:bold;
+}
+	
+	
+	
+hr{
+background:black;
+border-color: black;
+margin-top: 25%;
+}
+
+.maxname{
+	position:absolute;
+	top: 3px;
+	left:10px;
+	}
+	
+.maxname input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:125px;
+	height:30px;
+	text-align:center;
+	font-size: .75rem;
+	font-weight:bold;
+	}
 	
 </style>
 <title>Pokemon Masters Custom Sync Pair Creator</title>
@@ -943,172 +1008,186 @@ outline:1px solid;
 		<img id="role" src="strike.png">
 		<img id="type" src="Normal.png">
 		<img id="weak" src="Normal.png">
-		<form class="syncpairname">
+		
+		<form class="syncpairname"spellcheck="false">
 			<input type="text"placeholder="Sync Pair Name">
 		</form>
-		<form class="syncattackname">
+		<form class="syncattackname"spellcheck="false">
 			<input type="text"placeholder="Sync Attack Name">
 		</form>
 		
-		<form class="gauge1">
+		<form class="gauge1"spellcheck="false">
 			<input type="text" placeholder="1-4">
 		</form>
-		<form class="category1">
+		<form class="category1"spellcheck="false">
 			<input type="text"placeholder="status">
 		</form>
-		<form class="power1">
+		<form class="power1"spellcheck="false">
 			<input type="text"placeholder="100-100">
 		</form>
-		<form class="accuracy1">
+		<form class="accuracy1"spellcheck="false">
 			<input type="text"placeholder="100">
 		</form>
-		<form class="target1">
+		<form class="target1"spellcheck="false">
 			<input type="text"placeholder="all opponents">
 		</form>
-		<form class="effect1">
+		<form class="effect1"spellcheck="false">
 			<input type="text"placeholder="none">
 		</form>
 		
-		<form class="gauge2">
+		<form class="gauge2"spellcheck="false">
 			<input type="text" placeholder="1-4">
 		</form>
-		<form class="category2">
+		<form class="category2"spellcheck="false">
 			<input type="text"placeholder="status">
 		</form>
-		<form class="power2">
+		<form class="power2"spellcheck="false">
 			<input type="text"placeholder="100-100">
 		</form>
-		<form class="accuracy2">
+		<form class="accuracy2"spellcheck="false">
 			<input type="text"placeholder="100">
 		</form>
-		<form class="target2">
+		<form class="target2"spellcheck="false">
 			<input type="text"placeholder="all opponents">
 		</form>
-		<form class="effect2">
+		<form class="effect2"spellcheck="false">
 			<input type="text"placeholder="none">
 		</form>
 		
-		<form class="gauge3">
+		<form class="gauge3"spellcheck="false">
 			<input type="text" placeholder="1-4">
 		</form>
-		<form class="category3">
+		<form class="category3"spellcheck="false">
 			<input type="text"placeholder="status">
 		</form>
-		<form class="power3">
+		<form class="power3"spellcheck="false">
 			<input type="text"placeholder="100-100">
 		</form>
-		<form class="accuracy3">
+		<form class="accuracy3"spellcheck="false">
 			<input type="text"placeholder="100">
 		</form>
-		<form class="target3">
+		<form class="target3"spellcheck="false">
 			<input type="text"placeholder="all opponents">
 		</form>
-		<form class="effect3">
+		<form class="effect3"spellcheck="false">
 			<input type="text"placeholder="none">
 		</form>
 		
 		
-		<form class="gauge4">
+		<form class="gauge4"spellcheck="false">
 			<input type="text" placeholder="1-4">
 		</form>
-		<form class="category4">
+		<form class="category4"spellcheck="false">
 			<input type="text"placeholder="status">
 		</form>
-		<form class="power4">
+		<form class="power4"spellcheck="false">
 			<input type="text"placeholder="100-100">
 		</form>
-		<form class="accuracy4">
+		<form class="accuracy4"spellcheck="false">
 			<input type="text"placeholder="100">
 		</form>
-		<form class="target4">
+		<form class="target4"spellcheck="false">
 			<input type="text"placeholder="all opponents">
 		</form>
-		<form class="effect4">
+		<form class="effect4"spellcheck="false">
 			<input type="text"placeholder="none">
 		</form>
 		
-		<form class="category5">
+		<form class="category5"spellcheck="false">
 			<input type="text"placeholder="status">
 		</form>
 		
-		<form class="power5">
+		<form class="power5"spellcheck="false">
 			<input type="text"placeholder="100-100">
 		</form>
 		
-		<form class="target5">
+		<form class="target5"spellcheck="false">
 			<input type="text"placeholder="all opponents">
 		</form>
 		
 		
-		<textarea class="themeskills" rows="5" cols="20"placeholder="hit enter for each"></textarea>
-		<textarea class="description1" rows="6" cols="24"placeholder="Add additional effects"></textarea>
-		<textarea class="description2" rows="6" cols="24"placeholder="Add additional effects"></textarea>
-		<textarea class="description3" rows="6" cols="24"placeholder="Add additional effects"></textarea>
-		<textarea class="description4" rows="6" cols="24"placeholder="Add additional effects"></textarea>
+		<textarea class="themeskills" rows="5" cols="20"placeholder="hit enter for each"spellcheck="false"></textarea>
+		<textarea class="description1" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
+		<textarea class="description2" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
+		<textarea class="description3" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
+		<textarea class="description4" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
 		
-		<form class="attack1">
+		<form class="attack1"spellcheck="false">
 			<input type="text" placeholder="Move 1">
 		</form>
-		<form class="attack2">
+		<form class="attack2"spellcheck="false">
 			<input type="text" placeholder="Move 2">
 		</form>
-		<form class="attack3">
+		<form class="attack3"spellcheck="false">
 			<input type="text" placeholder="Move 3">
 		</form>
-		<form class="attack4">
+		<form class="attack4"spellcheck="false">
 			<input type="text" placeholder="Move 4">
 		</form>
 		
-		<form class="passive1">
+		<form class="passive1"spellcheck="false">
 			<input type="text" placeholder="Passive 1">
 		</form>
 		
-		<textarea class="passdesc1" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		<textarea class="passdesc1" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
 		
-		<form class="passive2">
+		<form class="passive2"spellcheck="false">
 			<input type="text" placeholder="Passive 2">
 		</form>
 		
-		<textarea class="passdesc2" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		<textarea class="passdesc2" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
 		
-			<form class="passive3">
+			<form class="passive3"spellcheck="false">
 			<input type="text" placeholder="Passive 3">
 		</form>
 		
-		<textarea class="passdesc3" rows="3" cols="40"placeholder="Add additional effects"></textarea>
+		<textarea class="passdesc3" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
 		
-		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"></textarea>
+		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"spellcheck="false"></textarea>
 		
 		
 	<p class="pokemon"><img id="sprite" src=
 	"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></p>
 	<p class="trainer"><img id="output"/></p>
 		
-					
+		<div class="maxmove" id="maxblock">
+		<hr></hr>
+		<form class="maxname"spellcheck="false">
+			<input type="text"placeholder="Max Move">
+		</form>
+		<p class="spacer">Max Uses</p>
+		<p>Category</p>
+		<p>Power</p>
+		<p>Accuracy</p>
+		<p>Target</p>
+		<p>Effect Tag</p>
+		</div>			
 </div>
-		
+	
+	
+	
 	<div class="selectors">
       <select id="selector"onchange="selectBackground()">
           <option>Move 1</option>
-		  <option value="var(--bugclr)">Bug</option>
-          <option value="var(--darkclr)">Dark</option>
-          <option value="var(--dragonclr)">Dragon</option>
-          <option value="var(--electricclr)">Electric</option>
-		  <option value="var(--fairyclr)">Fairy</option>
-          <option value="var(--fightingclr)">Fighting</option>
-          <option value="var(--fireclr)">Fire</option>
-          <option value="var(--flyingclr)">Flying</option>
-		  <option value="var(--ghostclr)">Ghost</option>
-          <option value="var(--grassclr)">Grass</option>
-		  <option value="var(--groundclr)">Ground</option>
-          <option value="var(--iceclr)">Ice</option>
-          <option value="var(--normalclr)">Normal</option>
-          <option value="var(--poisonclr)">Poison</option>
-		  <option value="var(--psychicclr)">Psychic</option>
-          <option value="var(--rockclr)">Rock</option>
-          <option value="var(--steelclr)">Steel</option>
-          <option value="var(--waterclr)">Water</option>
-		  <option value="var(--trainermoveclr)">Trainer Move</option>
+		  <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
          
       </select>   
      
@@ -1116,75 +1195,75 @@ outline:1px solid;
 	
       <select id="selector2"onchange="selectBackground2()">
           <option>Move 2 </option>
-          <option value="var(--bugclr)">Bug</option>
-          <option value="var(--darkclr)">Dark</option>
-          <option value="var(--dragonclr)">Dragon</option>
-          <option value="var(--electricclr)">Electric</option>
-		  <option value="var(--fairyclr)">Fairy</option>
-          <option value="var(--fightingclr)">Fighting</option>
-          <option value="var(--fireclr)">Fire</option>
-          <option value="var(--flyingclr)">Flying</option>
-		  <option value="var(--ghostclr)">Ghost</option>
-          <option value="var(--grassclr)">Grass</option>
-		  <option value="var(--groundclr)">Ground</option>
-          <option value="var(--iceclr)">Ice</option>
-          <option value="var(--normalclr)">Normal</option>
-          <option value="var(--poisonclr)">Poison</option>
-		  <option value="var(--psychicclr)">Psychic</option>
-          <option value="var(--rockclr)">Rock</option>
-          <option value="var(--steelclr)">Steel</option>
-          <option value="var(--waterclr)">Water</option>
-		  <option value="var(--trainermoveclr)">Trainer Move</option>
+		  <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
       </select>   
    
 		
 	
 		<select id="selector3"onchange="selectBackground3()">
 			<option>Move 3</option>
-			<option value="var(--bugclr)">Bug</option>
-          <option value="var(--darkclr)">Dark</option>
-          <option value="var(--dragonclr)">Dragon</option>
-          <option value="var(--electricclr)">Electric</option>
-		  <option value="var(--fairyclr)">Fairy</option>
-          <option value="var(--fightingclr)">Fighting</option>
-          <option value="var(--fireclr)">Fire</option>
-          <option value="var(--flyingclr)">Flying</option>
-		  <option value="var(--ghostclr)">Ghost</option>
-          <option value="var(--grassclr)">Grass</option>
-		  <option value="var(--groundclr)">Ground</option>
-          <option value="var(--iceclr)">Ice</option>
-          <option value="var(--normalclr)">Normal</option>
-          <option value="var(--poisonclr)">Poison</option>
-		  <option value="var(--psychicclr)">Psychic</option>
-          <option value="var(--rockclr)">Rock</option>
-          <option value="var(--steelclr)">Steel</option>
-          <option value="var(--waterclr)">Water</option>
-		  <option value="var(--trainermoveclr)">Trainer Move</option>
+			<option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
 		</select>   
 	
 	
 	
       <select id="selector4"onchange="selectBackground4()">
           <option>Move 4</option>
-          <option value="var(--bugclr)">Bug</option>
-          <option value="var(--darkclr)">Dark</option>
-          <option value="var(--dragonclr)">Dragon</option>
-          <option value="var(--electricclr)">Electric</option>
-		  <option value="var(--fairyclr)">Fairy</option>
-          <option value="var(--fightingclr)">Fighting</option>
-          <option value="var(--fireclr)">Fire</option>
-          <option value="var(--flyingclr)">Flying</option>
-		  <option value="var(--ghostclr)">Ghost</option>
-          <option value="var(--grassclr)">Grass</option>
-		  <option value="var(--groundclr)">Ground</option>
-          <option value="var(--iceclr)">Ice</option>
-          <option value="var(--normalclr)">Normal</option>
-          <option value="var(--poisonclr)">Poison</option>
-		  <option value="var(--psychicclr)">Psychic</option>
-          <option value="var(--rockclr)">Rock</option>
-          <option value="var(--steelclr)">Steel</option>
-          <option value="var(--waterclr)">Water</option>
-		  <option value="var(--trainermoveclr)">Trainer Move</option>
+          <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
       </select>   
     
 		
@@ -1270,7 +1349,8 @@ outline:1px solid;
 		<option value="Water.png">Water</option>
 	</select>
 	  
-	   <input type="search" id="mySearch"placeholder="please use the ID ie:1-898"><button onclick="pokeSearch()">Add Pokemon</button>
+	   <input type="search" id="mySearch"placeholder="please use id 1-898"><button onclick="pokeSearch()">Add Pokemon</button>
+	   <a href="#" class="onoff" onclick="maxOff()">Max Move(beta)</a>
     </div>	
 
 	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
@@ -1287,7 +1367,7 @@ outline:1px solid;
 					<li>Change colors and levels with the selectors below the image</li>
 					<li>Click on upload trainer to upload a trainer image(note use a png with no extra space is preferable)</li>
 					<li>When finished take a screenshot of the area</li>
-					<li>Pokemon Image can be used by searching for the pokemons ID number ie:1 for bulbasaur and so on</li>
+					<li>Pokemon Image can be used by searching for the pokemons ID number ie: 1 for bulbasaur and so on</li>
 					<li>You can enter a non valid id to get a blank image and then upload your own if you want</li>
 					<li>Bulbapedia should have high quality pngs of all characters and pokemon if searched</li>
 				</ul>
@@ -1313,40 +1393,28 @@ outline:1px solid;
 </html>
 
 <script>
-   function selectBackground(){
-        // Find your selector and pull it's selection
+		function selectBackground(){
         var select = document.getElementById('selector');
-        // Determine your target color (default 0 index to transparent)
-        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
-        // Update your results area
-        document.getElementById('PreviewResults').style.backgroundColor = color;
+        var color = select.options[select.selectedIndex].value;
+        document.getElementById('PreviewResults').style = color;
     }
 	
-	  function selectBackground2(){
-        // Find your selector and pull it's selection
+		function selectBackground2(){
         var select = document.getElementById('selector2');
-        // Determine your target color (default 0 index to transparent)
-        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
-        // Update your results area
-        document.getElementById('PreviewResults2').style.backgroundColor = color;
+        var color = select.options[select.selectedIndex].value;
+        document.getElementById('PreviewResults2').style = color;
     }
 	
-		  function selectBackground3(){
-        // Find your selector and pull it's selection
+		function selectBackground3(){
         var select = document.getElementById('selector3');
-        // Determine your target color (default 0 index to transparent)
-        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
-        // Update your results area
-        document.getElementById('PreviewResults3').style.backgroundColor = color;
+        var color = select.options[select.selectedIndex].value;
+        document.getElementById('PreviewResults3').style = color;
     }
 	
-			  function selectBackground4(){
-        // Find your selector and pull it's selection
+		function selectBackground4(){
         var select = document.getElementById('selector4');
-        // Determine your target color (default 0 index to transparent)
-        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
-        // Update your results area
-        document.getElementById('PreviewResults4').style.backgroundColor = color;
+        var color = select.options[select.selectedIndex].value;
+        document.getElementById('PreviewResults4').style = color;
     }
 	
 				  function selectBackground5(){
@@ -1408,4 +1476,14 @@ function pokeSearch() {
   let pokeImage = document.getElementById('sprite')
   pokeImage.srcset =    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeID}.png`
   }
+  
+  function maxOff() {
+  var x = document.getElementById("maxblock");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+  
 </script>
