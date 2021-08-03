@@ -30,7 +30,7 @@
 	
 html{
 font-family: 'Georama', sans-serif;
-
+background-white;
 }
 textarea,
 input[type] {
@@ -51,7 +51,7 @@ input[type] {
   }
 }
 body{
-background-image:url('forest2.jpg');
+background:url('forest2.jpg');
  background-repeat: no-repeat;
  
   background-size: cover;
@@ -1545,6 +1545,20 @@ display:none;
 		<option value="MasterSteel.png">Steel</option>
 		<option value="MasterWater.png">Water</option>
 	</select>
+		<select id="setbody" onchange="setBod();">
+		<option>Set Background</option>
+		<option value="arena2.jpg">Arena</option>
+		<option value="beach2.jpg">Beach</option>
+		<option value="canyon2.jpg">Canyon</option>
+		<option value="cave2.jpg">Cave</option>
+		<option value="christmas2.jpg">Christmas</option>
+		<option value="forest2.jpg">Forest</option>
+		<option value="glacier2.jpg">Glacier</option>
+		<option value="halloween2.jpg">Halloween</option>
+		<option value="Town2.jpg">Town</option>
+		<option value="volcano2.jpg">Volcano</option>
+		
+	</select>
     </div>	
 
 	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
@@ -1553,7 +1567,7 @@ display:none;
 
 		<div class="instructions">
 			<div class="clicker">
-				<h1>Instructions & Tips</h1>
+				<h1>Instructions and Tips</h1>
 				<a href="#footer" class="btn2" id="arrow"onclick="closeDiv()">▼</a>
 			</div>
 				<ul id="demo">
@@ -1696,5 +1710,9 @@ function pokeSearch() {
     y	.style.display = "block";
   }
 }
-  
+  function setBod() {
+        var x = document.getElementById('setbody');
+		var my = x.options[x.selectedIndex].value;
+		document.body.style.backgroundImage ='url('+ my +')';
+	}
 </script>
