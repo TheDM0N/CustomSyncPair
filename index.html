@@ -1139,8 +1139,81 @@ display:none;
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
 	}
-	
 
+.masterPassive{
+position:absolute;
+top:15px;
+left:280px;
+}
+	
+#badge-ribbon2 {
+      position: relative;
+  background: radial-gradient(circle, rgba(250,243,183,1) 0%, rgba(191,149,63,1) 57%, rgba(250,243,183,1) 100%);
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+	  
+	  
+   
+    }
+    #badge-ribbon2:before,
+    #badge-ribbon2:after {
+      content: '';
+      position: absolute;
+      border-bottom: 35px solid #9b1c31;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      top: 35px;
+      left: -10px;
+      transform: rotate(-140deg);
+      z-index:-1;
+    }
+    #badge-ribbon2:after {
+      left: auto;
+      right: -10px;
+      transform: rotate(140deg);
+    }
+#letter{
+font-size:35px;
+  text-align:center;
+  margin:0;
+  padding-top:5px;
+  padding-right:2px;
+  color:#BF953F;
+ font-family: sans-serif;
+  opacity:.4;
+   text-shadow: 2px 2px 2px #AA771C;
+}	
+
+.masterpName{
+position:absolute;
+top:350px;
+left:520px;
+width:180px;
+height:35px;
+background:#7851a9;
+border-radius:1000vw;
+opacity:.95;
+}
+
+.mpn{
+	position:relative;
+	top: 5px;
+	left:2px;
+	}
+	
+.mpn input[type="text"]{
+	background-color: transparent;
+    border: 0px solid;
+	outline: none;
+	width:170px;
+	height:20px;
+	text-align:center;
+	font-size: 1rem;
+	font-weight:bold;
+	}
+#mp{display:none;}
+#haha{display:none;}
 </style>
 <title>Pokemon Masters Custom Sync Pair Creator</title>
 <body>
@@ -1156,6 +1229,18 @@ display:none;
 		<img id="role" src="strike.png">
 		<img id="type" src="Normal.png">
 		<img id="weak" src="Normal.png">
+		
+		<div class="masterPassive" id="mp">
+			<div id="badge-ribbon2">
+				<p id="letter">M</p>
+			</div>
+		</div>
+		
+		<div class="masterpName" id="haha">
+			<form class="mpn"spellcheck="false">
+				<input type="text"placeholder="MasterPassive">
+			</form>
+		</div>
 		
 		<form class="syncpairname"spellcheck="false">
 			<input type="text"placeholder="Sync Pair Name">
@@ -1331,7 +1416,11 @@ display:none;
 		<textarea class="description6" rows="5" cols="22"placeholder="Add additional effects"spellcheck="false"></textarea>
 		<div class="grad">
 		</div>
-		</div>			
+		</div>	
+
+		
+			
+		
 </div>
 	
 	
@@ -1524,6 +1613,7 @@ display:none;
 	   <input type="search" id="mySearch"placeholder="please use id 1-898"><button onclick="pokeSearch()">Add Pokemon</button>
 	   
 	   <button type="button" class="onoff"onclick="maxOff()">Max Move</button>
+	   <button type="button" class="mpon"onclick="masterOff()">Master Passive</button>
 	   <select id="maxchoose" onchange="setMax();">
 		<option>Max Move Type</option>
 		<option value="MasterBug.png">Bug</option>
@@ -1715,4 +1805,19 @@ function pokeSearch() {
 		var my = x.options[x.selectedIndex].value;
 		document.body.style.backgroundImage ='url('+ my +')';
 	}
+	
+	  function masterOff() {
+  var x = document.getElementById("mp");
+  var y = document.getElementById('haha');
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+   if (y.style.display === "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+  }
+ }
 </script>
