@@ -1653,6 +1653,7 @@ opacity:.95;
 
 	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
 	<p><label for="file" style="cursor: pointer;">Upload Trainer</label></p>
+	<input type="search" id="betasearch"placeholder="please check link"><button onclick="betaSearch()">Beta Search</button><a href="https://thedm0n.github.io/SearchBarHelp/" target="_blank">How to Use the new searchbar</a>
 	
 
 		<div class="instructions">
@@ -1820,4 +1821,13 @@ function pokeSearch() {
     y.style.display = "block";
   }
  }
+ 
+ function betaSearch() {
+	let pokeID = document.getElementById("betasearch").value;
+  let pokeImage = document.getElementById('sprite');
+  
+  if (pokeID==0){pokeImage.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
+  else
+ { pokeImage.srcset =    `https://www.serebii.net/swordshield/pokemon/${pokeID}.png`}
+  }
 </script>
