@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap" rel="stylesheet">
+<html>
 <style>
 :root{
 	--bugclr:#9CB558;
@@ -25,31 +25,22 @@
 	--steelclr:#7D879B;
 	--waterclr:#55B8E1;
 	--trainermoveclr:#9DC9C0;
-	
 	}
 	
 html{
 font-family: 'Georama', sans-serif;
 background-white;
 }
-textarea,
-input[type] {
-    font-family: 'Georama', sans-serif;
-	margin:0;
+
+.container{
+  
+min-width:1800px;
+  height:auto;
+ 
+  margin:auto;
+ 
 }
 
-@media only screen and (max-width: 600px) {
-  textarea,
-  input[type] {
-    font-family:arial;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  html {
-    font-family:arial;
-  }
-}
 body{
 background:url('forest2.jpg');
  background-repeat: no-repeat;
@@ -58,1476 +49,600 @@ background:url('forest2.jpg');
   margin:0;
 }
 
-.template{
-	height:auto;
-	width:50%;
-	margin:auto;
-	position:relative;
-	
-	
+.syncpair{
+  margin:.5rem 0;
 
+  background: white;
+  padding:1rem 5rem;
+  border: 2px solid black;
+  border-radius:1000vw;
+}
+
+.passivebox{
+position:relative;
+  left:50%;
+  width:350px;
+  height:auto;
+  margin:1rem;
+  
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align:center;
+  padding:.5rem;
   }
-	
-.block1{
-	background:pink;
-    
-    height: 202px;
-    width: 150px;
-    margin: 0;
-      border-radius: 10px;
+  
+ #passdisplay{
+ background: rgba(0, 240, 255, .5);}
 
-	position:absolute;
-	z-index: -5;
-	top:496px;
-	left:167px;
-	}
-	
-.block2{
-    background: pink;
-    height: 202px;
-    width: 150px;
-    margin: 0;
-    border-radius: 10px;
-	position:absolute;
-	z-index: -5;
-	top:496px;
-	left: 330px;
-	}
-	
-.block3{
-    background: pink;
-    height: 202px;
-    width: 150px;
-    margin: 0;
-    border-radius: 10px;
-	position:absolute;
-	z-index: -1;
-	top:496px;
-	left: 492px;
-	}
-	
-.block4{
-    background: pink;
-    height: 202px;
-    width: 150px;
-    margin: 0;
-    border-radius: 10px;
-	position:absolute;
-	z-index: -5;
-	top:496px;
-	left: 655px;
-	}
-.block5{
-    background: pink;
-    height: 70px;
-    width: 340px;
-    margin: 0;
-    border-radius: 10px;
-	position:absolute;
-	z-index: -5;
-	top:713px;
-	left: 500px;
-	}
-		
-.trainer{
-	position:absolute;
-	top:100px;
-	left:250px;
-	}
-	
-.pokemon{
-	position:absolute;
-	top:100px;
-	left:25px;
-	}
-	
-#sprite{
-	position:absolute;
-	height:200px;
-	width:auto;
-	}
-#output{
-	position:absolute;
-	height:325px;
-	width:auto;
-	z-index:-5;
-	}
-	
-.syncpairname{
-	position:absolute;
-	top: 0px;
-	left:289px;
-	}
-	
-.syncpairname input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:390px;
-	height:45px;
-	text-align:center;
-	font-size: 1.5rem;
-	font-weight:bold;
-	}
-	
-	.syncattackname{
-	position:absolute;
-	top: 725px;
-	left:150px;
-	}
-	
-.syncattackname input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:280px;
-	height:45px;
-	text-align:center;
-	font-size: 1rem;
-	font-weight:bold;
-	}
-	
-.gauge1{
-	position:absolute;
-	top: 539px;
-	left:235px;
-	}
-	
-.gauge1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.category1{
-	position:absolute;
-	top: 554px;
-	left:235px;
-	}
-	
-.category1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.power1{
-	position:absolute;
-	top: 569px;
-	left:235px;
-	}
-	
-.power1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.accuracy1{
-	position:absolute;
-	top: 584px;
-	left:235px;
-	}
-	
-.accuracy1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.target1{
-	position:absolute;
-	top: 599px;
-	left:230px;
-	}
-	
-.target1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:75px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.effect1{
-	position:absolute;
-	top: 614px;
-	left:235px;
-	}
-	
-.effect1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.gauge2{
-	position:absolute;
-	top: 539px;
-	left:400px;
-	}
-	
-.gauge2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.category2{
-	position:absolute;
-	top: 554px;
-	left:400px;
-	}
-	
-.category2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.power2{
-	position:absolute;
-	top: 569px;
-	left:400px;
-	}
-	
-.power2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.accuracy2{
-	position:absolute;
-	top: 584px;
-	left:400px;
-	}
-	
-.accuracy2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.target2{
-	position:absolute;
-	top: 599px;
-	left:395px;
-	}
-	
-.target2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:75px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.effect2{
-	position:absolute;
-	top: 614px;
-	left:400px;
-	}
-	
-.effect2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.gauge3{
-	position:absolute;
-	top: 539px;
-	left:565px;
-	}
-	
-.gauge3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.category3{
-	position:absolute;
-	top: 554px;
-	left:565px;
-	}
-	
-.category3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.power3{
-	position:absolute;
-	top: 569px;
-	left:565px;
-	}
-	
-.power3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.accuracy3{
-	position:absolute;
-	top: 584px;
-	left:565px;
-	}
-	
-.accuracy3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.target3{
-	position:absolute;
-	top: 599px;
-	left:560px;
-	}
-	
-.target3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:75px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.effect3{
-	position:absolute;
-	top: 614px;
-	left:565px;
-	}
-	
-.effect3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.gauge4{
-	position:absolute;
-	top: 539px;
-	left:730px;
-	}
-	
-.gauge4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.category4{
-	position:absolute;
-	top: 554px;
-	left:730px;
-	}
-	
-.category4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.power4{
-	position:absolute;
-	top: 569px;
-	left:730px;
-	}
-	
-.power4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.accuracy4{
-	position:absolute;
-	top: 584px;
-	left:730px;
-	}
-	
-.accuracy4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.target4{
-	position:absolute;
-	top: 599px;
-	left:725px;
-	}
-	
-.target4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:75px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.effect4{
-	position:absolute;
-	top: 614px;
-	left:730px;
-	}
-	
-.effect4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.category5{
-	position:absolute;
-	top: 718px;
-	left:590px;
-	}
-	
-.category5 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.power5{
-	position:absolute;
-	top: 739px;
-	left:590px;
-	}
-	
-.power5 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-.target5{
-	position:absolute;
-	top: 760px;
-	left:580px;
-	}
-	
-.target5 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:75px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	}
-	
-#star{
-	position:absolute;
-	top: 40px;
-	left:455px;
-	height:40px;
-	width:auto;
-	margin:0;
-	z-index:5;
-	
+.passname1, .passname2, .passname3, .passname4{
+  font-size:1.5rem;
 }
-	
+
+
+.masterpassive{display:none;}
+
+.info{
+position:relative;
+  left:50%;
+   transform:translate(-50%);
+  display:flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin:1rem;
+  width:40%;
+  border-radius: 10px;
+  text-align:center;
+  background: rgba(255, 255, 255, .75);
+}
+
+.column2{
+  flex-basis:50%;
+}
+
 #role{
-	position:absolute;
-	top: 425px;
-	left:199px;
-	height:30px;;
-	width:auto;
-	margin:0;
-	z-index:5;
-	
-}
+width:50px;
+height:auto;
+margin:0;}
 
 #type{
-	position:absolute;
-	top: 425px;
-	left:268px;
-	height:30px;;
-	width:auto;
-	margin:0;
-	z-index:5;
-	
+width:40px;
+height:auto;
+margin:0;
 }
 
 #weak{
-	position:absolute;
-	top: 425px;
-	left:345px;
-	height:30px;;
-	width:auto;
-	margin:0;
-	z-index:5;
-	
+width:40px;
+height:auto;
+margin:0;
 }
 
-
-.themeskills{
-	position:absolute;
-	top:413px;
-	left:545px;
-	text-align:center;
-	font-size: .7rem;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	background-color: transparent;
-	line-height: 1.1;
-	overflow:hidden;
-	}
-	
-.description1{
-	position:absolute;
-	top:635px;
-	left:172px;
-	font-size:.55rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	margin:0;
-	}
-	
-.description2{
-	position:absolute;
-	top:635px;
-	left:335px;
-	font-size:.55rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	margin:0;
-	}
-	
-.description3{
-	position:absolute;
-	top:635px;
-	left:497px;
-	font-size:.55rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	margin:0;
-	}
-	
-.description4{
-	position:absolute;
-	top:635px;
-	left:660px;
-	font-size:.55rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	margin:0;
-	}
-	
-.attack1{
-	position:absolute;
-	top:502px;
-	left:177px;
-	}
-	
-	.attack1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:125px;
-	height:30px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-	.attack2{
-	position:absolute;
-	top:502px;
-	left:340px;
-	}
-	
-	.attack2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:125px;
-	height:30px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-		.attack3{
-	position:absolute;
-	top:502px;
-	left:503px;
-	}
-	
-	.attack3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:125px;
-	height:30px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-			.attack4{
-	position:absolute;
-	top:502px;
-	left:666px;
-	}
-	
-	.attack4 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:125px;
-	height:30px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-.passive1{
-	position:absolute;
-	top:140px;
-	left:515px;
-	}
-	
-.passive1 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:200px;
-	height:25px;
-	text-align:center;
-	font-size: 1rem;
-	font-weight:bold;
-	}
-	
-.passdesc1{
-	position:absolute;
-	top:160px;
-	left:485px;
-	font-size:.75rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	}
-	
-.passive2{
-	position:absolute;
-	top:207px;
-	left:515px;
-	}
-	
-.passive2 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:200px;
-	height:25px;
-	text-align:center;
-	font-size: 1rem;
-	font-weight:bold;
-	}
-	
-
-	
-.passdesc2{
-	position:absolute;
-	top:227px;
-	left:485px;
-	font-size:.75rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	}
-	
-.passive3{
-	position:absolute;
-	top:274px;
-	left:515px;
-	}
-	
-.passive3 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:200px;
-	height:25px;
-	text-align:center;
-	font-size: 1rem;
-	font-weight:bold;
-	}
-	
-.passdesc3{
-	position:absolute;
-	top:294px;
-	left:485px;
-	font-size:.75rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	}
-	
-.synceffect{
-	position:absolute;
-	top:718px;
-	left:666px;
-	font-size:.75rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	}
-	
-.instructions{
-	width:350px;
-	height:auto;
-	outline:1px solid;
-	margin-left:75%;
-	
-	background-image:url('repeat.png');
-	}
-	
-.instructions h1{
-	text-align:center;
-	width:90%;
-	}
-	
-li{
-	line-height: 1.5;
-	padding: 0rem 2rem 0rem 0rem;
-	}
-	
-.clicker{
-	display:flex;
-	flex-direction: row;
-	align-items:center;
-	}
-	
-.btn2{
-	flex-grow: 1;
-	font-size:1rem;
-	text-decoration:none;
-	color:black;
-	margin:  0;
-}
-.btn2:hover{
-color:red;
-}
-
-ul{
-display:none;
-}
-
-input[type="text"]:hover{
-outline:1px solid;
-}
-
-textarea:hover{
-outline:1px solid;
-}
-
-.maxmove{
-height: 202px;
-    width: 150px;
-  
-    border-radius: 10px;
-	border: 3px solid;
-	background: url("MasterNormal.png"),#ed3572;
-	background-repeat: no-repeat;
-	background-size:50%;
-	background-position: 50% 50%;
-	background-blend-mode:lighten;
-	margin-bottom: 1em;
-
-	
-	position:relative;
-	
-	left:410px;
-	display:none;
-	font-size:.75em;
-	line-height:.25;
-	}
-	
-.maxmove p{
-margin-left: 3px;
-font-weight:bold;
-}
-	
-	
-	
-hr{
-background:black;
-border-color: black;
-margin-top: 25%;
-}
-
-.maxname{
-	position:absolute;
-	top: 3px;
-	left:10px;
-	z-index: 1;
-	}
-	
-.maxname input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:125px;
-	height:30px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-	.gauge6{
-	position:absolute;
-	top: 48px;
-	left:75px;
-	}
-	
-.gauge6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-	.category6{
-	position:absolute;
-	top: 63px;
-	left:75px;
-	}
-	
-.category6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;	
-	}
-	
-		.power6{
-	position:absolute;
-	top: 78px;
-	left:75px;
-	}
-	
-.power6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-			.accuracy6{
-	position:absolute;
-	top: 93px;
-	left:75px;
-	}
-	
-.accuracy6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-
-			.target6{
-	position:absolute;
-	top: 108px;
-	left:62px;
-	}
-	
-.target6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:80px;
-	height:12px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}	
-			.effect6{
-	position:absolute;
-	top: 123px;
-	left:75px;
-	}
-	
-.effect6 input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:50px;
-	height:10px;
-	text-align:center;
-	font-size: .75rem;
-	font-weight:bold;
-	}
-	
-	.description6{
-	position:absolute;
-	top:140px;
-	left:10px;
-	font-size:.55rem;
-	background-color:transparent;
-	overflow:hidden;
-	text-align:center;
-	resize: none;
-	outline: none;
-	border: 0px solid;
-	margin:0;
-	
-	font-weight:bold;
-	}
-	
-#maxchoose{
-display:none;
-}
-
-.grad{
-	position:absolute;
-	top:0;
-	z-index: 0;
-	width:150px;
-	height: 38px;
-	background: linear-gradient(180deg, rgba(237,53,114,1) 10%, rgba(188,16,73,1) 75%);
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	}
-
-.masterPassive{
-position:absolute;
-top:15px;
-left:280px;
-}
-	
-#badge-ribbon2 {
-      position: relative;
-  background: radial-gradient(circle, rgba(250,243,183,1) 0%, rgba(191,149,63,1) 57%, rgba(250,243,183,1) 100%);
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-	  
-	  
-   
-    }
-    #badge-ribbon2:before,
-    #badge-ribbon2:after {
-      content: '';
-      position: absolute;
-      border-bottom: 35px solid #9b1c31;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      top: 35px;
-      left: -10px;
-      transform: rotate(-140deg);
-      z-index:-1;
-    }
-    #badge-ribbon2:after {
-      left: auto;
-      right: -10px;
-      transform: rotate(140deg);
-    }
-#letter{
-font-size:35px;
-  text-align:center;
+.skill{
   margin:0;
-  padding-top:5px;
-  padding-right:2px;
-  color:#BF953F;
- font-family: sans-serif;
-  opacity:.4;
-   text-shadow: 2px 2px 2px #AA771C;
-}	
-
-.masterpName{
-position:absolute;
-top:350px;
-left:520px;
-width:180px;
-height:35px;
-background:#7851a9;
-border-radius:1000vw;
-opacity:.95;
+  line-height:1.1;
+  font-size:.8rem;
 }
 
-.mpn{
-	position:relative;
-	top: 5px;
-	left:2px;
-	}
-	
-.mpn input[type="text"]{
-	background-color: transparent;
-    border: 0px solid;
-	outline: none;
-	width:170px;
-	height:20px;
-	text-align:center;
-	font-size: 1rem;
-	font-weight:bold;
-	}
-#mp{display:none;}
-#haha{display:none;}
+.stats{
+  margin:1rem;
+ 
+}
+
+#stat{
+display:none;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;position:relative;
+  left:50%;
+   transform:translate(-50%);background: rgba(255, 255, 255, .75); }
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:center;vertical-align:top}
+
+.moves{
+position:relative;
+  left:50%;
+   transform:translate(-50%);
+display:flex;
+justify-content: center;
+gap:1rem;
+width:40%;
+margin-bottom:1rem;
+margin-top:1rem;
+}
+h2{
+line-height:1;
+text-align:center;
+font-size: 1em;
+}
+.movesstuff{
+line-height:.25;
+font-size:.75rem;
+margin-left:.25rem;
+}
+.move{
+height: auto;
+min-height:220px;
+width: 160px;
+border-radius: 10px;
+border: 3px solid;
+
+}
+
+hr{
+  background:black;
+  border-color:black;
+}
+
+#box1{
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+}
+
+#box2{
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+}
+
+#box3{
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+}
+
+#box4{
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+}
+
+.effects{
+  margin-right:.25rem;
+  float:right;
+  text-align:center;
+}
+
+.additonal1{
+ text-align:center;
+ font-size:.7rem;
+ line-height:1;
+ margin:.25rem;
+}
+
+#maxdisplay{
+  display:none;
+}
+
+.maxmovebox{
+ 
+  position:relative;
+  left:50%;
+   transform:translate(-50%);
+  display:flex;
+  justify-content: center;
+  gap:1rem;
+width:40%;
+
+}
+
+
+
+.syncmovebox{
+  margin:1rem;
+}
+
+.syncmove{
+  position:relative;
+  left:50%;
+   transform:translate(-50%);
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  border:2px solid black;
+  border-radius:1rem;
+  background:var(--trainermoveclr);
+  width:50%
+ }
+
+.syncname{
+  margin:0;
+  flex-basis:32%;
+  text-align:center;
+}
+
+.syncnode{
+height:75px;
+margin:0;
+}
+
+.syncstuff{
+  margin:0;
+}
+
+.moreinfo{
+  margin:0;
+  text-align:center;
+  flex-basis:15%;
+  font-size:.75rem;
+}
+
+.syncdesc{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+#pokemon{
+  position:absolute;
+  top:60px;
+  left:375px;
+  margin:0;
+  width:auto;
+  height:250px;
+}
+
+.pokeball{
+position:absolute;
+ top:85px;
+  left:400px;
+width:200px;
+height:auto;
+filter: grayscale(100%);
+opacity:.75;
+z-index:-1;
+}
+
+
+#output{
+  position:absolute;
+  top:150px;
+  left:725px;
+  height:325px;
+  width:auto;
+  z-index:-1;
+}
+
+.trainerbtn{
+cursor: pointer;
+outline:1px solid black;
+background:white;
+}
+
+#star{
+height:40px;
+	width:auto;
+margin-top:-1.5rem;
+}
+
+.level{
+display:flex;
+flex-direction: column;
+width:50%;
+align-items:center;
+margin:auto;
+}
 </style>
-<title>Pokemon Masters Custom Sync Pair Creator</title>
-<body>
 
-<div class="template">
-	<img src="PokemonMastersCustomTemplate.png"width="auto" height="800" >
-		<div class="block1" id="PreviewResults"></div>
-		<div class="block2" id="PreviewResults2"></div>
-		<div class="block3" id="PreviewResults3"></div>
-		<div class="block4" id="PreviewResults4"></div>
-		<div class="block5" id="PreviewResults5"></div>
-		<img id="star" src="3star.png">
-		<img id="role" src="strike.png">
-		<img id="type" src="Normal.png">
-		<img id="weak" src="Normal.png">
-		
-		<div class="masterPassive" id="mp">
-			<div id="badge-ribbon2">
-				<p id="letter">M</p>
-			</div>
-		</div>
-		
-		<div class="masterpName" id="haha">
-			<form class="mpn"spellcheck="false">
-				<input type="text"placeholder="MasterPassive">
-			</form>
-		</div>
-		
-		<form class="syncpairname"spellcheck="false">
-			<input type="text"placeholder="Sync Pair Name">
-		</form>
-		<form class="syncattackname"spellcheck="false">
-			<input type="text"placeholder="Sync Attack Name">
-		</form>
-		
-		<form class="gauge1"spellcheck="false">
-			<input type="text" placeholder="1-4">
-		</form>
-		<form class="category1"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		<form class="power1"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		<form class="accuracy1"spellcheck="false">
-			<input type="text"placeholder="100">
-		</form>
-		<form class="target1"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		<form class="effect1"spellcheck="false">
-			<input type="text"placeholder="none">
-		</form>
-		
-		<form class="gauge2"spellcheck="false">
-			<input type="text" placeholder="1-4">
-		</form>
-		<form class="category2"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		<form class="power2"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		<form class="accuracy2"spellcheck="false">
-			<input type="text"placeholder="100">
-		</form>
-		<form class="target2"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		<form class="effect2"spellcheck="false">
-			<input type="text"placeholder="none">
-		</form>
-		
-		<form class="gauge3"spellcheck="false">
-			<input type="text" placeholder="1-4">
-		</form>
-		<form class="category3"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		<form class="power3"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		<form class="accuracy3"spellcheck="false">
-			<input type="text"placeholder="100">
-		</form>
-		<form class="target3"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		<form class="effect3"spellcheck="false">
-			<input type="text"placeholder="none">
-		</form>
-		
-		
-		<form class="gauge4"spellcheck="false">
-			<input type="text" placeholder="1-4">
-		</form>
-		<form class="category4"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		<form class="power4"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		<form class="accuracy4"spellcheck="false">
-			<input type="text"placeholder="100">
-		</form>
-		<form class="target4"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		<form class="effect4"spellcheck="false">
-			<input type="text"placeholder="none">
-		</form>
-		
-		<form class="category5"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		
-		<form class="power5"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		
-		<form class="target5"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		
-		
-		
-		<textarea class="themeskills" rows="5" cols="20"placeholder="hit enter for each"spellcheck="false"></textarea>
-		<textarea class="description1" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
-		<textarea class="description2" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
-		<textarea class="description3" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
-		<textarea class="description4" rows="6" cols="24"placeholder="Add additional effects"spellcheck="false"></textarea>
-		
-		<form class="attack1"spellcheck="false">
-			<input type="text" placeholder="Move 1">
-		</form>
-		<form class="attack2"spellcheck="false">
-			<input type="text" placeholder="Move 2">
-		</form>
-		<form class="attack3"spellcheck="false">
-			<input type="text" placeholder="Move 3">
-		</form>
-		<form class="attack4"spellcheck="false">
-			<input type="text" placeholder="Move 4">
-		</form>
-		
-		<form class="passive1"spellcheck="false">
-			<input type="text" placeholder="Passive 1">
-		</form>
-		
-		<textarea class="passdesc1" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
-		
-		<form class="passive2"spellcheck="false">
-			<input type="text" placeholder="Passive 2">
-		</form>
-		
-		<textarea class="passdesc2" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
-		
-			<form class="passive3"spellcheck="false">
-			<input type="text" placeholder="Passive 3">
-		</form>
-		
-		<textarea class="passdesc3" rows="3" cols="40"placeholder="Add additional effects"spellcheck="false"></textarea>
-		
-		<textarea class="synceffect" rows="4" cols="20"placeholder="Effects, ex, ect"spellcheck="false"></textarea>
-		
-		
-	<p class="pokemon"><img id="sprite" src=
-	"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></p>
-	<p class="trainer"><img id="output"/></p>
-		
-		<div class="maxmove" id="maxblock">
-		<hr></hr>
-		<form class="maxname"spellcheck="false">
-			<input type="text"placeholder="Max Move">
-		</form>
-		<p class="spacer">Max Uses</p>
-		<p>Category</p>
-		<p>Power</p>
-		<p>Accuracy</p>
-		<p>Target</p>
-		<p>Effect Tag</p>
-		<form class="gauge6"spellcheck="false">
-			<input type="text" placeholder="1-4">
-		</form>
-		<form class="category6"spellcheck="false">
-			<input type="text"placeholder="status">
-		</form>
-		<form class="power6"spellcheck="false">
-			<input type="text"placeholder="100-100">
-		</form>
-		<form class="accuracy6"spellcheck="false">
-			<input type="text"placeholder="100">
-		</form>
-		<form class="target6"spellcheck="false">
-			<input type="text"placeholder="all opponents">
-		</form>
-		<form class="effect6"spellcheck="false">
-			<input type="text"placeholder="none">
-		</form>
-		<textarea class="description6" rows="5" cols="22"placeholder="Add additional effects"spellcheck="false"></textarea>
-		<div class="grad">
-		</div>
-		</div>	
 
-		
-			
-		
+<title>Custom Sync Pair Maker</title>
+<div class="container">
+<div class="level">
+    <h1 class="syncpair"contenteditable="true">Sync Pair Name</h1>
+	<img id="star" src="3star.png">
+	</div>
+ 
+  <div class="passivebox" id="passdisplay">
+     <div class="masterpassive" id="masterbox">
+      <h1 class="passname4"contenteditable="true">Master Passive</h1>
+      <p class="passdesc4"contenteditable="true">Passive Effect</p>
+    </div>
+    <div class="passive1">
+      <h1 class="passname1"contenteditable="true">Passive 1</h1>
+      <p class="passdesc1"contenteditable="true">Passive Effect</p>
+    </div>
+     <div class="passive2">
+      <h1 class="passname2"contenteditable="true">Passive 2</h1>
+      <p class="passdesc2"contenteditable="true">Passive Effect</p>
+    </div>
+     <div class="passive3">
+      <h1 class="passname3"contenteditable="true">Passive 3</h1>
+      <p class="passdesc3"contenteditable="true">Passive Effect</p>
+    </div>
+  </div>  
+  
+  <div class="info">
+   <div class="column"> <p>Role</p><img id="role" src="strike.png"></div>
+    <div class="column"><p>Type</p><img id="type" src="MasterNormal.png"></div>
+    <div class="column"><p>Weakness</p><img id="weak" src="MasterNormal.png"></div>
+    <div class="column2"> <p class="themeskill">Theme Skills</p><p class="skill"contenteditable="true">Strike</p><p class="skill"contenteditable="true">Strike</p><p class="skill"contenteditable="true">Strike</p><p class="skill"contenteditable="true">Strike</p><p class="skill"contenteditable="true">Strike</p></div>
+   </div>
+  
+  <div class="stats" id="stat">
+    <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Level</th>
+    <th class="tg-0lax">Lv. 1</th>
+    <th class="tg-0lax">Lv. 45</th>
+    <th class="tg-0lax">Lv. 100</th>
+    <th class="tg-0lax">Lv. 120</th>
+    <th class="tg-0lax">Lv. 125</th>
+    <th class="tg-0lax">Lv. 130</th>
+    <th class="tg-0lax">Lv. 135</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Hp</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Attack</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Defense</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Sp. Attack</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Sp. Def</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Speed</td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+    <td class="tg-0lax"contenteditable="true"></td>
+  </tr>
+</tbody>
+</table>
+  </div>
+  <div class="moves">
+    <div class="move one" id="box1">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move two" id="box2">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move three"id="box3">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move four"id="box4">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+  </div>
+  
+<div id="maxdisplay">
+<div class="maxmovebox">
+  <div class="move five" id="max1">
+      <h2 contenteditable="true">Max Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Uses: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move six"id="max2">
+      <h2 contenteditable="true">Max Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move seven"id="max3">
+      <h2 contenteditable="true">Max Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move eight"id="max4">
+      <h2 contenteditable="true">Max Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
 </div>
-	
-	
-	
-	<div class="selectors">
-      <select id="selector"onchange="selectBackground()">
-          <option>Move 1</option>
-		  <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
-         
-      </select>   
-     
-	
-	
-      <select id="selector2"onchange="selectBackground2()">
-          <option>Move 2 </option>
-		  <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
-      </select>   
-   
-		
-	
-		<select id="selector3"onchange="selectBackground3()">
-			<option>Move 3</option>
-			<option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
-		</select>   
-	
-	
-	
-      <select id="selector4"onchange="selectBackground4()">
-          <option>Move 4</option>
-          <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-          <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
-      </select>   
+</div>
+
+<div class="syncmovebox">
+  
+  <div class="syncmove" id="sync">
+    <h3 class="syncname"contenteditable="true">Sync Move Name</h3>
     
-		
-	
-      <select id="selector5" onchange="selectBackground5()">
+    <div class="syncdesc">
+      <img class="syncnode" src="https://i.imgur.com/qLrNw5s.png">
+      <div class="syc">
+      <p class="syncstuff">Category: <span contenteditable="true" > Special</span></p>
+      <p class="syncstuff">Power: <span contenteditable="true">300</span></p>
+      <p class="syncstuff">Target: <span contenteditable="true">An Opponent</span></p>
+      </div>
+    </div>
+    <p class="moreinfo" contenteditable="true">Additional Info</p>
+  </div>
+ </div>
+
+ <img id="pokemon" src="https://www.serebii.net/swordshield/pokemon/001.png">
+ <img class="pokeball" src="pokeball.png">
+<p class="trainer"><img id="output"/></p>
+  
+</div>
+  
+<div class="selectors">
+  <select id="selector"onchange="selectBackground()">
+    <option>Move 1</option>
+    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+  </select>
+  
+  <select id="selector2"onchange="selectBackground2()">
+    <option>Move 2</option>
+    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+  </select>
+  
+  <select id="selector3"onchange="selectBackground3()">
+    <option>Move 3</option>
+    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+  </select>
+  
+  <select id="selector4"onchange="selectBackground4()">
+    <option>Move 4</option>
+    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
+    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
+          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
+          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
+		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
+          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
+          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
+          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
+		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
+          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
+		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
+          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
+          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
+          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
+		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
+          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
+          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
+          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
+		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+  </select>
+  
+   <select id="selector5" onchange="selectBackground5()">
           <option>Select Sync</option>
           <option value="var(--bugclr)">Bug</option>
           <option value="var(--darkclr)">Dark</option>
@@ -1548,16 +663,8 @@ opacity:.95;
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
       </select> 
-	<select id="starchoose" onchange="setPicture();">
-		<option>Star Level</option>
-		<option value="1star.png">1 Star</option>
-		<option value="3star.png">3 Star</option>
-		<option value="4star.png">4 Star</option>
-		<option value="5star.png">5 Star</option>
-		<option value="6star.png">6 Star</option>
-	</select>
-	
-	<select id="rolechoose" onchange="setRole();">
+	  
+	  <select id="rolechoose" onchange="setRole()">
 		<option>Role</option>
 		<option value="strike.png">Strike</option>
 		<option value="Strike (Special).png">Special Strike</option>
@@ -1565,57 +672,8 @@ opacity:.95;
 		<option value="tech.png">Tech</option>
 	</select>
 	
-	<select id="typechoose" onchange="setType();">
+	 <select id="typechoose" onchange="setType()">
 		<option>Type</option>
-		<option value="Bug.png">Bug</option>
-		<option value="Dark.png">Dark</option>
-		<option value="Dragon.png">Dragon</option>
-		<option value="Electric.png">Electric</option>
-		<option value="Fairy.png">Fairy</option>
-		<option value="Fighting.png">Fighting</option>
-		<option value="Fire.png">Fire</option>
-		<option value="Flying.png">Flying</option>
-		<option value="Ghost.png">Ghost</option>
-		<option value="Grass.png">Grass</option>
-		<option value="ground.png">Ground</option>
-		<option value="Ice.png">Ice</option>
-		<option value="Normal.png">Normal</option>
-		<option value="Poison.png">Poison</option>
-		<option value="Psychic.png">Pyschic</option>
-		<option value="Rock.png">Rock</option>
-		<option value="Steel.png">Steel</option>
-		<option value="Water.png">Water</option>
-	</select>
-	
-	<select id="weakchoose" onchange="setWeak();">
-		<option>Weakness</option>
-		<option value="Bug.png">Bug</option>
-		<option value="Dark.png">Dark</option>
-		<option value="Dragon.png">Dragon</option>
-		<option value="Electric.png">Electric</option>
-		<option value="Fairy.png">Fairy</option>
-		<option value="Fighting.png">Fighting</option>
-		<option value="Fire.png">Fire</option>
-		<option value="Flying.png">Flying</option>
-		<option value="Ghost.png">Ghost</option>
-		<option value="Grass.png">Grass</option>
-		<option value="ground.png">Ground</option>
-		<option value="Ice.png">Ice</option>
-		<option value="Normal.png">Normal</option>
-		<option value="Poison.png">Poison</option>
-		<option value="Psychic.png">Pyschic</option>
-		<option value="Rock.png">Rock</option>
-		<option value="Steel.png">Steel</option>
-		<option value="Water.png">Water</option>
-	</select>
-	
-	  
-	   <input type="search" id="mySearch"placeholder="please use id 1-898"><button onclick="pokeSearch()">Add Pokemon</button>
-	   
-	   <button type="button" class="onoff"onclick="maxOff()">Max Move</button>
-	   <button type="button" class="mpon"onclick="masterOff()">Master Passive</button>
-	   <select id="maxchoose" onchange="setMax();">
-		<option>Max Move Type</option>
 		<option value="MasterBug.png">Bug</option>
 		<option value="MasterDark.png">Dark</option>
 		<option value="MasterDragon.png">Dragon</option>
@@ -1635,6 +693,45 @@ opacity:.95;
 		<option value="MasterSteel.png">Steel</option>
 		<option value="MasterWater.png">Water</option>
 	</select>
+	
+	<select id="weakchoose" onchange="setWeak()">
+		<option>Weakness</option>
+		<option value="MasterBug.png">Bug</option>
+		<option value="MasterDark.png">Dark</option>
+		<option value="MasterDragon.png">Dragon</option>
+		<option value="MasterElectric.png">Electric</option>
+		<option value="MasterFairy.png">Fairy</option>
+		<option value="MasterFight.png">Fighting</option>
+		<option value="MasterFire.png">Fire</option>
+		<option value="MasterFly.png">Flying</option>
+		<option value="MasterGhost.png">Ghost</option>
+		<option value="MasterGrass.png">Grass</option>
+		<option value="MasterGround.png">Ground</option>
+		<option value="MasterIce.png">Ice</option>
+		<option value="MasterNormal.png">Normal</option>
+		<option value="MasterPoison.png">Poison</option>
+		<option value="MasterPsychic.png">Pyschic</option>
+		<option value="MasterRock.png">Rock</option>
+		<option value="MasterSteel.png">Steel</option>
+		<option value="MasterWater.png">Water</option>
+	</select>
+	<select id="starchoose" onchange="setPicture();">
+		<option>Star Level</option>
+		<option value="1star.png">1 Star</option>
+		<option value="3star.png">3 Star</option>
+		<option value="4star.png">4 Star</option>
+		<option value="5star.png">5 Star</option>
+		<option value="6star.png">6 Star</option>
+	</select>
+  
+  <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Beta Search</button>
+  <button type="button" id="setstat"onclick="showStats()">Stats</button>
+  <button type="button" id="setmax"onclick="showMax()">Max Move</button>
+  <button type="button" id="setmaster"onclick="showMaster()">Master Passive</button>
+  
+  <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+	<label for="file" class="trainerbtn">Upload Trainer</label>
+	</select>
 		<select id="setbody" onchange="setBod();">
 		<option>Set Background</option>
 		<option value="arena2.jpg">Arena</option>
@@ -1649,185 +746,171 @@ opacity:.95;
 		<option value="volcano2.jpg">Volcano</option>
 		
 	</select>
-    </div>	
+  
+</div>
+<div>
+<a href="https://thedm0n.github.io/SyncPairMakerHelp/"
+		target="_blank" class="link">For Help click here</a>
+</div>
+<div>
+<a href="https://surveyheart.com/form/6121dc761fbcd1418f427fb0"
+		target="_blank" class="link">For Questions and Suggestions or to rate website click here</a>
+</div>
 
-	<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-	<p><label for="file" style="cursor: pointer;">Upload Trainer</label></p>
-	<input type="search" id="betasearch"placeholder="please check link"><button onclick="betaSearch()">Add Pokemon(BETA)</button><a href="https://thedm0n.github.io/SearchBarHelp/" target="_blank">How to Use the new searchbar</a>
-	
-
-		<div class="instructions">
-			<div class="clicker">
-				<h1>Instructions and Tips</h1>
-				<a href="#footer" class="btn2" id="arrow"onclick="closeDiv()">▼</a>
-			</div>
-				<ul id="demo">
-					<li>Click on areas with words in order to edit them</li>
-					<li>Change colors and levels with the selectors below the image</li>
-					<li>Click on Gmax move to add it to the photo the editor selector will appear below the move selectors</li>
-					<li>Click on upload trainer to upload a trainer image(note: use a png with no extra space for best results)</li>
-					<li>Pokemon Image can be used by searching for the pokemons ID number (which is their numerical number on bulbapedia)</li>
-					<li>You can enter the number 0 to have a blank area to add your own image afterwards(Mega evolutions and other forms have to do this method for now)</li>
-					<li>Bulbapedia should have high quality pngs of all characters and pokemon if searched</li>
-					<li>When finished take a screenshot of the area, if using on desktop and using a Gmax move, enter full screen mode to fit it all</li>
-					<li>Please share this website and contact u/Dmon24 on reddit for any more questions or suggestions</li>
-				</ul>
-		</div>
-
-	
-	
-	
-	
-	
-</body>
-
-<footer id="footer"></footer>
-
-
-
-
-
-
-
-
-
-</html>
 
 <script>
-		function selectBackground(){
+
+
+
+function selectBackground(){
         var select = document.getElementById('selector');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('PreviewResults').style = color;
-    }
+        document.getElementById('box1').style = color;
+		
+		boxalert();
 	
-		function selectBackground2(){
+		
+		
+    }
+
+
+function boxalert() {
+var select = document.getElementById('selector');
+var color = select.options[select.selectedIndex].value;
+
+if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+{document.getElementById('max1').style.display="none";}
+else{document.getElementById('max1').style=color;}
+}
+
+function selectBackground2(){
         var select = document.getElementById('selector2');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('PreviewResults2').style = color;
+        document.getElementById('box2').style = color;
+		boxalert2();
     }
 	
-		function selectBackground3(){
+	function boxalert2() {
+var select = document.getElementById('selector2');
+var color = select.options[select.selectedIndex].value;
+
+if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+{document.getElementById('max2').style.display="none";}
+else{document.getElementById('max2').style=color;}
+}
+
+function selectBackground3(){
         var select = document.getElementById('selector3');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('PreviewResults3').style = color;
+        document.getElementById('box3').style = color;
+		boxalert3();
     }
 	
-		function selectBackground4(){
+		function boxalert3() {
+var select = document.getElementById('selector3');
+var color = select.options[select.selectedIndex].value;
+
+if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+{document.getElementById('max3').style.display="none";}
+else{document.getElementById('max3').style=color;}
+}
+
+function selectBackground4(){
         var select = document.getElementById('selector4');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('PreviewResults4').style = color;
+        document.getElementById('box4').style = color;
+		boxalert4();
     }
 	
-				  function selectBackground5(){
-        // Find your selector and pull it's selection
-        var select = document.getElementById('selector5');
-        // Determine your target color (default 0 index to transparent)
-        var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
-        // Update your results area
-        document.getElementById('PreviewResults5').style.backgroundColor = color;
-    }
-	
-	var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-	};
-	
+	function boxalert4() {
+var select = document.getElementById('selector4');
+var color = select.options[select.selectedIndex].value;
 
-	function setPicture() {
-        var img = document.getElementById("starchoose");
-		var value = img.options[img.selectedIndex].value;
-		document.getElementById("star").src=value;
-	}
+if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+{document.getElementById('max4').style.display="none";}
+else{document.getElementById('max4').style=color;}
+}
 	
-	function setRole() {
+function selectBackground5(){
+         var select = document.getElementById('selector5');
+		 var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
+         document.getElementById('sync').style.backgroundColor = color;
+    }
+	
+function setRole() {
         var img = document.getElementById("rolechoose");
 		var value = img.options[img.selectedIndex].value;
-		document.getElementById("role").src=value;
-	}
-	
-		function setType() {
+		document.getElementById("role").src=value;}
+		
+function setType() {
         var img = document.getElementById("typechoose");
 		var value = img.options[img.selectedIndex].value;
-		document.getElementById("type").src=value;
-	}
-	
-		function setWeak() {
+		document.getElementById("type").src=value;}
+
+function setWeak() {
         var img = document.getElementById("weakchoose");
 		var value = img.options[img.selectedIndex].value;
-		document.getElementById("weak").src=value;
-	}
-	
-	function setMax() {
-        var x = document.getElementById('maxchoose');
-		var my = x.options[x.selectedIndex].value;
-		document.getElementById("maxblock").style.backgroundImage ='url('+ my +')';
-	}
-	
-	function closeDiv() {
-  var x = document.getElementById("demo");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-   var y = document.getElementById("arrow");
-   if (y.innerHTML === "▼"){
-   y.innerHTML = "▲";
-   } else {
-   y.innerHTML="▼";
-}
-}
+		document.getElementById("weak").src=value;}
 
-function pokeSearch() {
-	let pokeID = document.getElementById("mySearch").value;
-  let pokeImage = document.getElementById('sprite');
-  
-  if (pokeID==0){pokeImage.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
-  else
- { pokeImage.srcset =    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeID}.png`}
-  }
-  
-  function maxOff() {
-  var x = document.getElementById("maxblock");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-  var y = document.getElementById("maxchoose");
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y	.style.display = "block";
-  }
-}
-  function setBod() {
-        var x = document.getElementById('setbody');
-		var my = x.options[x.selectedIndex].value;
-		document.body.style.backgroundImage ='url('+ my +')';
-	}
-	
-	  function masterOff() {
-  var x = document.getElementById("mp");
-  var y = document.getElementById('haha');
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-   if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
- }
- 
- function betaSearch() {
+function betaSearch() {
 	let pokeID = document.getElementById("betasearch").value;
-  let pokeImage = document.getElementById('sprite');
+  let pokeImage = document.getElementById('pokemon');
   
   if (pokeID==0){pokeImage.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
   else
  { pokeImage.srcset =    `https://www.serebii.net/swordshield/pokemon/${pokeID}.png`}
   }
+  
+  
+  function showStats() {
+  var x = document.getElementById("stat");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+  function showMax() {
+  var x = document.getElementById("maxdisplay");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+
+}
+
+function showMaster() {
+  var x = document.getElementById("masterbox");
+  var y = document.getElementById("passdisplay");
+  if (x.style.display === "block") {
+    x.style.display = "none"; y.style="background:rgba(0, 240, 255, .5)";
+  } else {
+    x.style.display = "block";
+	y.style= "background: rgba(120,81,169,.75)";
+  }
+  
+    
+ }
+ 
+ function setPicture() {
+        var img = document.getElementById("starchoose");
+		var value = img.options[img.selectedIndex].value;
+		document.getElementById("star").src=value;
+	}
+
+		
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+	};
+	
+	function setBod() {
+        var x = document.getElementById('setbody');
+		var my = x.options[x.selectedIndex].value;
+		document.body.style.backgroundImage ='url('+ my +')';
+	}
 </script>
+
+</html>
