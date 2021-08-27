@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,  initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap" rel="stylesheet">
@@ -69,13 +69,21 @@ position:relative;
   border-radius: 15px;
   text-align:center;
   padding:.5rem;
+  line-height:1.5;
   }
   
  #passdisplay{
  background: rgba(0, 240, 255, .5);}
 
+
 .passname1, .passname2, .passname3, .passname4{
-  font-size:1.5rem;
+font-size:1.1rem;
+margin:0;
+}
+
+.passdesc1, .passdesc2,.passdesc3,.passdesc4{
+font-size:.80rem;
+margin:0 1.5rem;
 }
 
 
@@ -290,8 +298,8 @@ z-index:-1;
 
 #output{
   position:absolute;
-  top:150px;
-  left:725px;
+  top:115px;
+  left:700px;
   height:325px;
   width:auto;
   z-index:-1;
@@ -316,10 +324,36 @@ width:50%;
 align-items:center;
 margin:auto;
 }
-	
+
 .bottom{
-	margin:1rem;
-	}
+margin:1rem;
+}
+
+.selectors{display:flex;
+align-items: flex-start;
+justify-content:center;
+gap:1rem;
+
+margin:0;
+
+
+}
+
+.movsel, .statstuff, .otherstuff, .userup{
+display:flex;
+flex-direction:column;
+align-items: flex-start;
+gap:.5rem;
+
+}
+
+.bottom{
+line-height:1.5;
+font-weight:bold;
+font-size:1.5rem;
+margin:0 1rem;
+}
+
 </style>
 
 
@@ -438,7 +472,7 @@ margin:auto;
     <div class="move one" id="box1">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 Gauge</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -449,7 +483,7 @@ margin:auto;
     <div class="move two" id="box2">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">2/2</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -460,7 +494,7 @@ margin:auto;
     <div class="move three"id="box3">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">2 Uses</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -471,7 +505,7 @@ margin:auto;
     <div class="move four"id="box4">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">1 Gauge</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -554,6 +588,7 @@ margin:auto;
 </div>
   
 <div class="selectors">
+<div class="movsel">
   <select id="selector"onchange="selectBackground()">
     <option>Move 1</option>
     <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
@@ -667,7 +702,8 @@ margin:auto;
           <option value="var(--steelclr)">Steel</option>
           <option value="var(--waterclr)">Water</option>
       </select> 
-	  
+	  </div>
+	  <div class="statstuff">
 	  <select id="rolechoose" onchange="setRole()">
 		<option>Role</option>
 		<option value="strike.png">Strike</option>
@@ -727,14 +763,19 @@ margin:auto;
 		<option value="5star.png">5 Star</option>
 		<option value="6star.png">6 Star</option>
 	</select>
-  
-  <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon</button>
+  </div>
+  <div class="otherstuff">
   <button type="button" id="setstat"onclick="showStats()">Stats</button>
   <button type="button" id="setmax"onclick="showMax()">Max Move</button>
   <button type="button" id="setmaster"onclick="showMaster()">Master Passive</button>
-  
+  </div>
+  <div class="userup">
+ <div> <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon(beta)</button>Supports different forms, variations, megas ect. but has low quality for anything not in sword and shield</div>
+ <div> <input type="search" id="oldsearch"placeholder="Use Id 0-898"><button onclick="oldSearch()">Add Pokemon(oldstyle)</button>High Quality for all, but no forms</div>
+  <div> <input type="search" id="shinysearch"placeholder="Use Id 000-898"><button onclick="shinySearch()">Add Shiny</button>Same as first but shinys</div>
   <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
 	<label for="file" class="trainerbtn">Upload Trainer</label>
+	</div>
 	</select>
 		<select id="setbody" onchange="setBod();">
 		<option>Set Background</option>
@@ -756,7 +797,7 @@ margin:auto;
 <a href="https://thedm0n.github.io/SyncPairMakerHelp/"
 		target="_blank" class="link">For Help click here</a>
 </div>
-<div  class="bottom">
+<div class="bottom">
 <a href="https://surveyheart.com/form/6121dc761fbcd1418f427fb0"
 		target="_blank" class="link">For Questions and Suggestions or to rate website click here</a>
 </div>
@@ -770,7 +811,7 @@ function selectBackground(){
         var select = document.getElementById('selector');
         var color = select.options[select.selectedIndex].value;
         document.getElementById('box1').style = color;
-		
+		document.getElementById('selector').style = color;
 		boxalert();
 	
 		
@@ -864,6 +905,21 @@ function betaSearch() {
   else
  { pokeImage.srcset =    `https://www.serebii.net/swordshield/pokemon/${pokeID}.png`}
   }
+  
+  function oldSearch() {
+	let oldID = document.getElementById("oldsearch").value;
+  let oldPoke = document.getElementById('pokemon');
+  if (oldID==0){oldPoke.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
+  else
+ { oldPoke.srcset =    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${oldID}.png`}
+  }
+  
+  function shinySearch(){
+  let shinyID = document.getElementById("shinysearch").value;
+  let shinyPoke = document.getElementById('pokemon');
+  shinyPoke.srcset= `https://www.serebii.net/Shiny/SWSH/${shinyID}.png`
+  }
+  
   
   
   function showStats() {
