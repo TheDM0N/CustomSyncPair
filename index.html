@@ -355,7 +355,7 @@ margin:0 1rem;
 
 
 <title>Custom Sync Pair Maker</title>
-<div class="container">
+<div class="container"spellcheck="false">
 <div class="level">
     <h1 class="syncpair"contenteditable="true">Sync Pair Name</h1>
 	<img id="star" src="3star.png">
@@ -829,6 +829,7 @@ function selectBackground2(){
         var select = document.getElementById('selector2');
         var color = select.options[select.selectedIndex].value;
         document.getElementById('box2').style = color;
+		document.getElementById('selector2').style = color;
 		boxalert2();
     }
 	
@@ -845,6 +846,7 @@ function selectBackground3(){
         var select = document.getElementById('selector3');
         var color = select.options[select.selectedIndex].value;
         document.getElementById('box3').style = color;
+		document.getElementById('selector3').style = color;
 		boxalert3();
     }
 	
@@ -861,6 +863,7 @@ function selectBackground4(){
         var select = document.getElementById('selector4');
         var color = select.options[select.selectedIndex].value;
         document.getElementById('box4').style = color;
+		document.getElementById('selector4').style = color;
 		boxalert4();
     }
 	
@@ -877,6 +880,7 @@ function selectBackground5(){
          var select = document.getElementById('selector5');
 		 var color = (select.selectedIndex != 0) ? select.options[select.selectedIndex].value : 'transparent';
          document.getElementById('sync').style.backgroundColor = color;
+		 document.getElementById('selector5').style.backgroundColor = color;
     }
 	
 function setRole() {
