@@ -30,6 +30,7 @@
 html{
 font-family: 'Georama', sans-serif;
 background-white;
+font-size:16px;
 }
 
 .container{
@@ -179,24 +180,24 @@ border: 3px solid;
 }
 
 hr{
-  background:black;
-  border-color:black;
+  background:#0c0c0c;
+  border-color:#0c0c0c;
 }
 
 #box1{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
 }
 
 #box2{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
 }
 
 #box3{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
 }
 
 #box4{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);
+  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
 }
 
 .effects{
@@ -469,7 +470,7 @@ margin:0 1rem;
     <div class="move one" id="box1">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 Gauge</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -491,7 +492,7 @@ margin:0 1rem;
     <div class="move three"id="box3">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">2/2</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -502,7 +503,7 @@ margin:0 1rem;
     <div class="move four"id="box4">
       <h2 contenteditable="true">Move Name</h2>
       <hr></hr>
-      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">1 Gauge</span></p>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
       <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
       <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
       <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
@@ -588,94 +589,94 @@ margin:0 1rem;
 <div class="movsel">
   <select id="selector"onchange="selectBackground()">
     <option>Move 1</option>
-    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+		<option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
   </select>
   
   <select id="selector2"onchange="selectBackground2()">
     <option>Move 2</option>
-    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+    <option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
   </select>
   
   <select id="selector3"onchange="selectBackground3()">
     <option>Move 3</option>
-    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+    <option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
   </select>
   
   <select id="selector4"onchange="selectBackground4()">
     <option>Move 4</option>
-    <option value="background: linear-gradient(180deg, rgba(156,181,88,1) 5%, rgba(140,163,79,1) 20.5%, rgba(156,181,88,1) 20.5%);">Bug</option>
-    <option value="background: linear-gradient(180deg, rgba(86,85,97,1) 6%, rgba(69,68,78,1) 20.5%, rgba(86,85,97,1) 20.5%);">Dark</option>
-          <option value="background: linear-gradient(180deg, rgba(17,131,160,1) 6%, rgba(14,105,128,1) 20.5%, rgba(17,131,160,1) 20.5%);">Dragon</option>
-          <option value="background: linear-gradient(180deg, rgba(219,180,9,1) 6%, rgba(175,144,7,1) 20.5%, rgba(219,180,9,1) 20.5%);">Electric</option>
-		  <option value="background: linear-gradient(180deg, rgba(237,155,184,1) 6%, rgba(190,124,147,1) 20.5%, rgba(237,155,184,1) 20.5%);">Fairy</option>
-          <option value="background: linear-gradient(180deg, rgba(213,123,71,1) 6%, rgba(170,98,57,1) 20.5%, rgba(213,123,71,1) 20.5%);">Fighting</option>
-          <option value="background: linear-gradient(180deg, rgba(218,66,70,1) 6%, rgba(174,53,57,1) 20.5%, rgba(218,66,70,1) 20.5%);">Fire</option>
-          <option value="background: linear-gradient(180deg, rgba(90,130,239,1) 6%, rgba(72,104,191,1) 20.5%, rgba(90,130,239,1) 20.5%);">Flying</option>
-		  <option value="background: linear-gradient(180deg, rgba(160,114,155,1) 6%, rgba(128,91,124,1) 20.5%, rgba(160,114,155,1) 20.5%);">Ghost</option>
-          <option value="background: linear-gradient(180deg, rgba(68,158,78,1) 6%, rgba(54,126,63,1) 20.5%, rgba(68,158,78,1) 20.5%);">Grass</option>
-		  <option value="background: linear-gradient(180deg, rgba(155,94,65,1) 6%, rgba(124,75,52,1) 20.5%, rgba(155,94,65,1) 20.5%);">Ground</option>
-          <option value="background: linear-gradient(180deg, rgba(110,180,185,1) 6%, rgba(88,144,148,1) 20.5%, rgba(110,180,185,1) 20.5%);">Ice</option>
-          <option value="background: linear-gradient(180deg, rgba(150,148,147,1) 6%, rgba(120,118,118,1) 20.5%, rgba(150,148,147,1) 20.5%);">Normal</option>
-          <option value="background: linear-gradient(180deg, rgba(129,84,153,1) 6%, rgba(103,67,122,1) 20.5%, rgba(129,84,153,1) 20.5%);">Poison</option>
-		  <option value="background: linear-gradient(180deg, rgba(229,109,155,1) 6%, rgba(183,87,124,1) 20.5%, rgba(229,109,155,1) 20.5%);">Psychic</option>
-          <option value="background: linear-gradient(180deg, rgba(160,140,119,1) 6%, rgba(128,112,95,1) 20.5%, rgba(160,140,119,1) 20.5%);">Rock</option>
-          <option value="background: linear-gradient(180deg, rgba(125,135,155,1) 6%, rgba(100,108,124,1) 20.5%, rgba(125,135,155,1) 20.5%);">Steel</option>
-          <option value="background: linear-gradient(180deg, rgba(85,184,225,1) 6%, rgba(68,146,180,1) 20.5%, rgba(85,184,225,1) 20.5%);">Water</option>
-		  <option value="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);">Trainer Move</option>
+    <option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
   </select>
   
    <select id="selector5" onchange="selectBackground5()">
@@ -725,7 +726,7 @@ margin:0 1rem;
 		<option value="MasterIce.png">Ice</option>
 		<option value="MasterNormal.png">Normal</option>
 		<option value="MasterPoison.png">Poison</option>
-		<option value="MasterPsychic.png">Psychic</option>
+		<option value="MasterPsychic.png">Pyschic</option>
 		<option value="MasterRock.png">Rock</option>
 		<option value="MasterSteel.png">Steel</option>
 		<option value="MasterWater.png">Water</option>
@@ -747,7 +748,7 @@ margin:0 1rem;
 		<option value="MasterIce.png">Ice</option>
 		<option value="MasterNormal.png">Normal</option>
 		<option value="MasterPoison.png">Poison</option>
-		<option value="MasterPsychic.png">Psychic</option>
+		<option value="MasterPsychic.png">Pyschic</option>
 		<option value="MasterRock.png">Rock</option>
 		<option value="MasterSteel.png">Steel</option>
 		<option value="MasterWater.png">Water</option>
@@ -807,8 +808,8 @@ margin:0 1rem;
 function selectBackground(){
         var select = document.getElementById('selector');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('box1').style = color;
-		document.getElementById('selector').style = color;
+        document.getElementById('box1').style.background = color;
+		document.getElementById('selector').style.background = color;
 		boxalert();
 	
 		
@@ -820,16 +821,16 @@ function boxalert() {
 var select = document.getElementById('selector');
 var color = select.options[select.selectedIndex].value;
 
-if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+if (color==="var(--trainermoveclr)")
 {document.getElementById('max1').style.display="none";}
-else{document.getElementById('max1').style=color;}
+else{document.getElementById('max1').style.background=color;}
 }
 
 function selectBackground2(){
         var select = document.getElementById('selector2');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('box2').style = color;
-		document.getElementById('selector2').style = color;
+        document.getElementById('box2').style.background = color;
+		document.getElementById('selector2').style.background = color;
 		boxalert2();
     }
 	
@@ -837,16 +838,16 @@ function selectBackground2(){
 var select = document.getElementById('selector2');
 var color = select.options[select.selectedIndex].value;
 
-if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+if (color==="var(--trainermoveclr)")
 {document.getElementById('max2').style.display="none";}
-else{document.getElementById('max2').style=color;}
+else{document.getElementById('max2').style.background=color;}
 }
 
 function selectBackground3(){
         var select = document.getElementById('selector3');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('box3').style = color;
-		document.getElementById('selector3').style = color;
+        document.getElementById('box3').style.background = color;
+		document.getElementById('selector3').style.background = color;
 		boxalert3();
     }
 	
@@ -854,16 +855,16 @@ function selectBackground3(){
 var select = document.getElementById('selector3');
 var color = select.options[select.selectedIndex].value;
 
-if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+if (color==="var(--trainermoveclr)")
 {document.getElementById('max3').style.display="none";}
-else{document.getElementById('max3').style=color;}
+else{document.getElementById('max3').style.background=color;}
 }
 
 function selectBackground4(){
         var select = document.getElementById('selector4');
         var color = select.options[select.selectedIndex].value;
-        document.getElementById('box4').style = color;
-		document.getElementById('selector4').style = color;
+        document.getElementById('box4').style.background = color;
+		document.getElementById('selector4').style.background = color;
 		boxalert4();
     }
 	
@@ -871,9 +872,9 @@ function selectBackground4(){
 var select = document.getElementById('selector4');
 var color = select.options[select.selectedIndex].value;
 
-if (color==="background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20.5%, rgba(157,201,192,1) 20.5%);")
+if (color==="var(--trainermoveclr)")
 {document.getElementById('max4').style.display="none";}
-else{document.getElementById('max4').style=color;}
+else{document.getElementById('max4').style.background=color;}
 }
 	
 function selectBackground5(){
