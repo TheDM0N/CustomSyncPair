@@ -185,19 +185,19 @@ hr{
 }
 
 #box1{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
+  background: white;
 }
 
 #box2{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
+background: white;
 }
 
 #box3{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
+background: white;
 }
 
 #box4{
-  background: linear-gradient(180deg, rgba(157,201,192,1) 6%, rgba(126,161,154,1) 20%, rgba(157,201,192,1) 20%);
+background: white;
 }
 
 .effects{
@@ -244,7 +244,7 @@ width:40%;
   align-items:center;
   border:2px solid black;
   border-radius:1rem;
-  background:var(--trainermoveclr);
+  background: white;
   width:50%
  }
 
@@ -579,7 +579,7 @@ margin:0 1rem;
   </div>
  </div>
 
- <img id="pokemon" src="https://www.serebii.net/swordshield/pokemon/001.png">
+ <img id="pokemon" src="https://www.serebii.net/pokemonhome/pokemon/001.png">
  <img class="pokeball" src="pokeball.png">
 <p class="trainer"><img id="output"/></p>
   
@@ -768,9 +768,8 @@ margin:0 1rem;
   <button type="button" id="setmaster"onclick="showMaster()">Master Passive</button>
   </div>
   <div class="userup">
- <div> <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon(beta)</button>Supports different forms, variations, megas ect. but has low quality for anything not in sword and shield</div>
- <div> <input type="search" id="oldsearch"placeholder="Use Id 0-898"><button onclick="oldSearch()">Add Pokemon(oldstyle)</button>High Quality for all, but no forms</div>
-  <div> <input type="search" id="shinysearch"placeholder="Use Id 000-898"><button onclick="shinySearch()">Add Shiny</button>Same as first but shinys</div>
+ <div> <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon</button>For more info on how to use go to help link</div>
+  <div> <input type="search" id="shinysearch"placeholder="Use Id 000-898"><button onclick="shinySearch()">Add Shiny</button></div>
   <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
 	<label for="file" class="trainerbtn">Upload Trainer</label>
 	</div>
@@ -905,21 +904,15 @@ function betaSearch() {
   
   if (pokeID==0){pokeImage.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
   else
- { pokeImage.srcset =    `https://www.serebii.net/swordshield/pokemon/${pokeID}.png`}
+ { pokeImage.srcset =    `https://www.serebii.net/pokemonhome/pokemon/${pokeID}.png`}
   }
   
-  function oldSearch() {
-	let oldID = document.getElementById("oldsearch").value;
-  let oldPoke = document.getElementById('pokemon');
-  if (oldID==0){oldPoke.srcset='https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png'}
-  else
- { oldPoke.srcset =    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${oldID}.png`}
-  }
+
   
   function shinySearch(){
   let shinyID = document.getElementById("shinysearch").value;
   let shinyPoke = document.getElementById('pokemon');
-  shinyPoke.srcset= `https://www.serebii.net/Shiny/SWSH/${shinyID}.png`
+  shinyPoke.srcset= `https://www.serebii.net/Shiny/home/${shinyID}.png`
   }
   
   
