@@ -33,6 +33,7 @@ background-white;
 font-size:16px;
 }
 
+body{margin:0;}
 .container{
   
 min-width:1800px;
@@ -106,6 +107,7 @@ position:relative;
 
 .column2{
   flex-basis:50%;
+  margin-bottom:.5rem;
 }
 
 #role{
@@ -124,6 +126,7 @@ width:40px;
 height:auto;
 margin:0;
 }
+
 
 .skill{
   margin:0;
@@ -157,7 +160,7 @@ display:flex;
 justify-content: center;
 gap:1rem;
 width:40%;
-margin-bottom:1rem;
+margin-bottom:0;
 margin-top:1rem;
 }
 h2{
@@ -218,7 +221,7 @@ background: white;
 }
 
 .maxmovebox{
- 
+ margin-top:1rem;
   position:relative;
   left:50%;
    transform:translate(-50%);
@@ -232,7 +235,7 @@ width:40%;
 
 
 .syncmovebox{
-  margin:1rem;
+  margin:0;
 }
 
 .syncmove{
@@ -337,13 +340,18 @@ margin:0;
 margin-left:1rem;
 }
 
-.movsel, .statstuff, .otherstuff, .userup{
+.movsel, .statstuff, .otherstuff, .userup, .postmoveselector{
 display:flex;
 flex-direction:column;
 align-items: flex-start;
 gap:.5rem;
 
 }
+
+#postrow{
+	display:none;
+}
+
 
 .bottom{
 line-height:1.5;
@@ -352,9 +360,50 @@ font-size:1.5rem;
 margin:0 1rem;
 }
 
+.signature{
+	white-space: nowrap;
+	opacity:.5;
+	display:inline-block;
+	font-size:.75rem;
+	position:relative;
+left:900px;
+line-height:0;
+margin:0;
+	z-index:-1;
+}
+
+.moves2{
+position:relative;
+  left:50%;
+   transform:translate(-50%);
+display:flex;
+justify-content: center;
+gap:1rem;
+width:40%;
+margin-bottom:0;
+margin-top:1rem;
+}
+
+#postmove{display:none;}
+#box5{
+background:white;
+visibility:visible;
+}
+#box6{
+background:white;
+visibility:visible;
+}
+#box7{
+background:white;
+visibility:visible;
+}
+#box8{
+background:white;
+visibility:visible;
+}
 </style>
 
-
+<body onbeforeunload="return myFunction()">
 <title>Custom Sync Pair Maker</title>
 <div class="container"spellcheck="false">
 <div class="level">
@@ -512,7 +561,54 @@ margin:0 1rem;
     <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
     </div>
   </div>
-  
+  <div id="postmove">
+   <div class="moves2">
+    <div class="move one" id="box5">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move two" id="box6">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move three"id="box7">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+    <div class="move four"id="box8">
+      <h2 contenteditable="true">Move Name</h2>
+      <hr></hr>
+      <p class="movesstuff">Gauge: <span class="effects"contenteditable="true">4 uses</span></p>
+      <p class="movesstuff">Category: <span class="effects"contenteditable="true">Special</span></p>
+      <p class="movesstuff">Power: <span class="effects"contenteditable="true">100-100</span></p>
+      <p class="movesstuff">Accuracy: <span class="effects"contenteditable="true">100</span></p>
+      <p class="movesstuff">Target: <span class="effects"contenteditable="true">An Opponent</span></p>
+      <p class="movesstuff">Effect: <span class="effects"contenteditable="true">Add Effect</span></p>
+    <div class="additonal1"><p contenteditable="true">Add Additional Effects</p></div>
+    </div>
+  </div>
+  </div>
 <div id="maxdisplay">
 <div class="maxmovebox">
   <div class="move five" id="max1">
@@ -561,7 +657,7 @@ margin:0 1rem;
     </div>
 </div>
 </div>
-
+ <p class="signature" id="sign">Made by <span id="user">___</span> with https://thedm0n.github.io/CustomSyncPair/ </p>
 <div class="syncmovebox">
   
   <div class="syncmove" id="sync">
@@ -582,7 +678,7 @@ margin:0 1rem;
  <img id="pokemon" src="https://www.serebii.net/pokemonhome/pokemon/001.png">
  <img class="pokeball" src="pokeball.png">
 <p class="trainer"><img id="output"/></p>
-  
+
 </div>
   
 <div class="selectors">
@@ -701,6 +797,105 @@ margin:0 1rem;
           <option value="var(--waterclr)">Water</option>
       </select> 
 	  </div>
+	  <div id="postrow">
+	  <div class="postmoveselector">
+  <select id="postselector"onchange="selectPost()">
+    <option>Post Move 1</option>
+		<option value="none">None</option>
+		<option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
+  </select>
+  
+  <select id="postselector2"onchange="selectPost2()">
+    <option>Post Move 2</option>
+		<option value="none">None</option>
+		<option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
+  </select>
+  
+  <select id="postselector3"onchange="selectPost3()">
+    <option>Post Move 3</option>
+		<option value="none">None</option>
+		<option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
+  </select>
+  
+  <select id="postselector4"onchange="selectPost4()">
+    <option>Post Move 4</option>
+		<option value="none">None</option>
+		<option value="var(--bugclr)">Bug</option>
+        <option value="var(--darkclr)">Dark</option>
+        <option value="var(--dragonclr)">Dragon</option>
+        <option value="var(--electricclr)">Electric</option>
+		<option value="var(--fairyclr)">Fairy</option>
+        <option value="var(--fightingclr)">Fighting</option>
+        <option value="var(--fireclr)">Fire</option>
+        <option value="var(--flyingclr)">Flying</option>
+		<option value="var(--ghostclr)">Ghost</option>
+        <option value="var(--grassclr)">Grass</option>
+		<option value="var(--groundclr)">Ground</option>
+        <option value="var(--iceclr)">Ice</option>
+        <option value="var(--normalclr)">Normal</option>
+        <option value="var(--poisonclr)">Poison</option>
+		<option value="var(--psychicclr)">Psychic</option>
+        <option value="var(--rockclr)">Rock</option>
+        <option value="var(--steelclr)">Steel</option>
+        <option value="var(--waterclr)">Water</option>
+		<option value="var(--trainermoveclr)">Trainer Move</option>
+  </select>
+  </div>
+  </div>
 	  <div class="statstuff">
 	  <select id="rolechoose" onchange="setRole()">
 		<option>Role</option>
@@ -708,7 +903,7 @@ margin:0 1rem;
 		<option value="Strike (Special).png">Special Strike</option>
 		<option value="support.png">Support</option>
 		<option value="tech.png">Tech</option>
-	</select>
+		</select>
 	
 	 <select id="typechoose" onchange="setType()">
 		<option>Type</option>
@@ -766,10 +961,12 @@ margin:0 1rem;
   <button type="button" id="setstat"onclick="showStats()">Stats</button>
   <button type="button" id="setmax"onclick="showMax()">Max Move</button>
   <button type="button" id="setmaster"onclick="showMaster()">Master Passive</button>
+  <button type="button" id="setpost"onclick="showPost()">Post Sync Moves</button>
   </div>
   <div class="userup">
  <div> <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon</button>For more info on how to use go to help link</div>
   <div> <input type="search" id="shinysearch"placeholder="Use Id 000-898"><button onclick="shinySearch()">Add Shiny</button></div>
+  <div> <input type="search" id="oldsearch"placeholder="Use Id 0-898"><button onclick="oldSearch()">Add Pokemon(old Images)</button></div>
   <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
 	<label for="file" class="trainerbtn">Upload Trainer</label>
 	</div>
@@ -788,15 +985,19 @@ margin:0 1rem;
 		<option value="volcano2.jpg">Volcano</option>
 		
 	</select>
-  
+  <div> <input type="search" id="signname"placeholder="Enter Reddit or Discord"><button onclick="signName()">Add Username</button></div>
 </div>
 <div class="bottom">
 <a href="https://thedm0n.github.io/SyncPairMakerHelp/"
-		target="_blank" class="link">For Help click here</a>
+		target="_blank" class="link">For Help Click Here</a>
 </div>
 <div class="bottom">
 <a href="https://surveyheart.com/form/6121dc761fbcd1418f427fb0"
-		target="_blank" class="link">For Questions and Suggestions or to rate website click here</a>
+		target="_blank" class="link">For Questions and Suggestions or to Rate Website Click Here</a>
+</div>
+<div class="bottom">
+<a href="https://thedm0n.github.io/DisplayCase/"
+		target="_blank" class="link">To View the Hall of Fame and Other User Made Pairs Click Here</a>
 </div>
 
 
@@ -915,6 +1116,11 @@ function betaSearch() {
   shinyPoke.srcset= `https://www.serebii.net/Shiny/home/${shinyID}.png`
   }
   
+   function oldSearch(){
+  let oldID = document.getElementById("oldsearch").value;
+  let oldPoke = document.getElementById('pokemon');
+  oldPoke.srcset= `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${oldID}.png`
+  }
   
   
   function showStats() {
@@ -966,6 +1172,71 @@ var loadFile = function(event) {
 		var my = x.options[x.selectedIndex].value;
 		document.body.style.backgroundImage ='url('+ my +')';
 	}
-</script>
+	
+	
+	function signName()	{
+		var changer= document.getElementById("user");
+		changer.innerHTML= document.getElementById("signname").value;
+		}
+		
+		
+		 function showPost() {
+  var x = document.getElementById("postmove");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  var y = document.getElementById("postrow");
+  if (y.style.display === "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+  }
 
+}
+
+function selectPost(){
+        var select = document.getElementById('postselector');
+        var color = select.options[select.selectedIndex].value;
+        
+		if (color==="none")
+		{document.getElementById('box5').style.visibility="hidden";}
+		else{document.getElementById('box5').style.background=color;document.getElementById('box5').style.visibility="visible";}
+	}
+	
+function selectPost2(){
+        var select = document.getElementById('postselector2');
+        var color = select.options[select.selectedIndex].value;
+        
+		if (color==="none")
+		{document.getElementById('box6').style.visibility="hidden";}
+		else{document.getElementById('box6').style.background=color;document.getElementById('box6').style.visibility="visible";}
+	}	
+	
+function selectPost3(){
+        var select = document.getElementById('postselector3');
+        var color = select.options[select.selectedIndex].value;
+        
+		if (color==="none")
+		{document.getElementById('box7').style.visibility="hidden";}
+		else{document.getElementById('box7').style.background=color;document.getElementById('box7').style.visibility="visible";}
+	}	
+
+function selectPost4(){
+        var select = document.getElementById('postselector4');
+        var color = select.options[select.selectedIndex].value;
+        
+		if (color==="none")
+		{document.getElementById('box8').style.visibility="hidden";}
+		else{document.getElementById('box8').style.background=color;document.getElementById('box8').style.visibility="visible";}
+	}	
+
+
+
+function myFunction() {
+  return "Warning";
+}
+</script>
+</body>
 </html>
