@@ -29,7 +29,7 @@
 	
 html{
 font-family: 'Georama', sans-serif;
-background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+background-image:url('repeat.png');
 font-size:16px;
 }
 
@@ -370,7 +370,7 @@ margin:0 1rem;
 left:900px;
 line-height:0;
 margin:0;
-	z-index:-1;
+	
 }
 
 .moves2{
@@ -402,6 +402,8 @@ visibility:hidden;
 background:white;
 visibility:hidden;
 }
+
+
 </style>
 
 <body onbeforeunload="return myFunction()">
@@ -959,10 +961,10 @@ visibility:hidden;
 	</select>
   </div>
   <div class="otherstuff">
-  <button type="button" id="setstat"onclick="showStats()">Stats</button>
-  <button type="button" id="setmax"onclick="showMax()">Max Move</button>
-  <button type="button" id="setmaster"onclick="showMaster()">Master Passive</button>
-  <button type="button" id="setpost"onclick="showPost()">Post Sync Moves</button>
+  <button type="button" id="setstat"onclick="showStats()" title="Adds a table to show stats">Stats</button>
+  <button type="button" id="setmax"onclick="showMax()"title="Adds Max Moves">Max Move</button>
+  <button type="button" id="setmaster"onclick="showMaster()"title="Adds Master Passive">Master Passive</button>
+  <button type="button" id="setpost"onclick="showPost()"title="Lets you add other moves on a new row">Post Sync Moves</button>
   </div>
   <div class="userup">
  <div> <input type="search" id="betasearch"placeholder="Use Id 000-898"><button onclick="betaSearch()">Add Pokemon</button>For more info on how to use go to help link</div>
